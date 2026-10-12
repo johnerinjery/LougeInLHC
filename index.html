@@ -1,0 +1,658 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>LHC &amp; NLH Free Rooms</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: sticky controls beside the answer on wide screens, one column on phones, full-width day timeline underneath.
+   Free is loud (green), in use is quiet (hatched slate). Cool blue-grey neutrals, one indigo accent for controls. */
+:root{
+  --bg:#edf1f5; --surface:#fafbfc; --surface-2:#e3e8ee;
+  --ink:#13202c; --ink-2:#44525f; --ink-3:#5b6977; --line:#d0d8e0;
+  --accent:#27479a; --accent-ink:#ffffff;
+  --free:#0f7447; --free-bg:#dbf0e4; --free-line:#a4d6bb;
+  --soon:#85550a; --soon-bg:#faedcd; --soon-line:#e6cb8a;
+  --bar:#5d6f84; --bar-ink:#ffffff;
+  --hatch:rgba(19,32,44,.09); --grid:rgba(19,32,44,.12);
+  --f-display:'Bricolage Grotesque','Avenir Next','Segoe UI',system-ui,sans-serif;
+  --f-body:'IBM Plex Sans','Segoe UI',system-ui,sans-serif;
+  --f-mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e151c; --surface:#151f29; --surface-2:#1e2b37;
+    --ink:#e7edf3; --ink-2:#aab6c2; --ink-3:#8c9aa8; --line:#26343f;
+    --accent:#8cadff; --accent-ink:#0b1220;
+    --free:#5fd69f; --free-bg:#11312a; --free-line:#24584a;
+    --soon:#efbb5a; --soon-bg:#33270e; --soon-line:#5f4818;
+    --bar:#40586f; --bar-ink:#e6edf4;
+    --hatch:rgba(231,237,243,.07); --grid:rgba(231,237,243,.10);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0e151c; --surface:#151f29; --surface-2:#1e2b37;
+  --ink:#e7edf3; --ink-2:#aab6c2; --ink-3:#8c9aa8; --line:#26343f;
+  --accent:#8cadff; --accent-ink:#0b1220;
+  --free:#5fd69f; --free-bg:#11312a; --free-line:#24584a;
+  --soon:#efbb5a; --soon-bg:#33270e; --soon-line:#5f4818;
+  --bar:#40586f; --bar-ink:#e6edf4;
+  --hatch:rgba(231,237,243,.07); --grid:rgba(231,237,243,.10);
+  color-scheme: dark;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+body{
+  background:var(--bg); color:var(--ink);
+  font:400 15px/1.5 var(--f-body);
+  padding-inline:16px; padding-block:24px 56px;
+}
+.app{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:24px}
+button,input{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.mono{font-family:var(--f-mono)}
+
+/* header */
+.top{display:flex;flex-direction:column;gap:8px}
+.eyebrow{margin:0;font:500 12px/1.3 var(--f-mono);letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3)}
+h1{margin:0;font:700 clamp(32px,6vw,48px)/1.02 var(--f-display);letter-spacing:-.025em;text-wrap:balance}
+.lede{margin:0;color:var(--ink-2);max-width:56ch}
+
+/* two-column shell */
+.layout{display:grid;grid-template-columns:minmax(0,1fr);gap:20px}
+@media (min-width:920px){
+  .layout{grid-template-columns:332px minmax(0,1fr);gap:28px;align-items:start}
+  .controls{position:sticky;top:calc(env(safe-area-inset-top,0px) + 16px)}
+}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px}
+
+/* controls */
+.controls{display:flex;flex-direction:column;gap:20px}
+.label-row{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:8px}
+.label{font:500 11px/1.2 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.hint{font:400 12px/1.3 var(--f-body);color:var(--ink-3)}
+.link{background:none;border:0;padding:2px 0;color:var(--accent);font:600 13px/1.2 var(--f-body);text-decoration:underline;text-underline-offset:3px}
+.days{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+.day{position:relative;height:44px;border:1px solid var(--line);background:var(--bg);border-radius:8px;font-weight:600;font-size:14px}
+.day[aria-pressed="true"],.chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.day.today::after{content:"";position:absolute;top:6px;right:6px;width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.75}
+.time-row{display:grid;grid-template-columns:52px minmax(0,1fr) 52px;gap:8px}
+.step{height:52px;border:1px solid var(--line);background:var(--bg);border-radius:8px;font:500 14px var(--f-mono)}
+.time-in{
+  width:100%;min-width:0;height:52px;text-align:center;
+  font:500 24px var(--f-mono);letter-spacing:.02em;
+  border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);
+}
+.slider-wrap{margin-top:10px}
+.slider{display:block;width:100%;height:26px;margin:0;accent-color:var(--accent)}
+.ticks{position:relative;height:16px;font:400 10px/1 var(--f-mono);color:var(--ink-3)}
+.ticks span{position:absolute;top:2px;transform:translateX(-50%)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{padding:6px 11px;border:1px solid var(--line);border-radius:999px;background:var(--bg);font:500 13px/1.2 var(--f-mono)}
+.chip.dur{font-family:var(--f-body);font-weight:500}
+
+/* answer */
+.answer{min-width:0}
+.when{margin:0;font:500 13px/1.3 var(--f-mono);letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3)}
+.count{margin:6px 0 0;font:600 clamp(24px,4vw,32px)/1.12 var(--f-display);letter-spacing:-.01em;text-wrap:balance}
+.count .big{font-size:1.9em;font-weight:700;color:var(--free);font-variant-numeric:tabular-nums}
+.count .big.none{color:var(--ink-2)}
+.sub{margin:6px 0 0;color:var(--ink-2);font-size:14px}
+.banner{margin:14px 0 0;padding:10px 12px;border:1px solid var(--soon-line);background:var(--soon-bg);color:var(--ink);border-radius:8px;font-size:14px}
+h3.sec{margin:26px 0 0;font:600 17px/1.2 var(--f-display);letter-spacing:-.005em}
+h3.sec + .hint{margin:2px 0 0}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:10px;margin-top:16px}
+.tile{background:var(--free-bg);border:1px solid var(--free-line);border-radius:8px;padding:12px 14px;min-width:0}
+.tile-top{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+.room{font:600 21px/1.1 var(--f-display);letter-spacing:-.01em;white-space:nowrap}
+.state{display:inline-flex;align-items:center;gap:5px;font:500 11px/1 var(--f-mono);letter-spacing:.07em;text-transform:uppercase;color:var(--free)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--free);display:inline-block}
+.detail{margin:8px 0 0;font-size:14px;color:var(--ink)}
+.detail b{font:500 14px var(--f-mono)}
+.meta{margin:2px 0 0;font:400 12px/1.3 var(--f-mono);color:var(--ink-2)}
+.empty{grid-column:1/-1;margin:0;padding:14px;border:1px dashed var(--line);border-radius:8px;color:var(--ink-2)}
+.soon-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.soon{display:inline-flex;gap:8px;align-items:baseline;padding:7px 11px;border:1px solid var(--soon-line);background:var(--soon-bg);border-radius:8px;font-size:13px}
+.soon .room{font-size:15px}
+.soon .mono{color:var(--soon);font-size:12px}
+.busy{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(236px,1fr));gap:8px}
+.busy li{
+  display:grid;grid-template-columns:1fr auto;gap:1px 10px;align-items:baseline;padding:9px 12px;
+  border:1px solid var(--line);border-radius:8px;background-color:var(--surface);
+  background-image:repeating-linear-gradient(135deg,transparent 0 7px,var(--hatch) 7px 8px);
+}
+.busy .room{font-size:16px;color:var(--ink-2)}
+.busy .until{font:500 12px var(--f-mono);color:var(--ink-2)}
+.busy .who{grid-column:1/-1;font-size:13px;color:var(--ink-3)}
+
+/* timeline */
+.tl-card{padding:16px 0 12px}
+.tl-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 20px;padding-inline:16px;margin-bottom:12px}
+.tl-head h2{margin:0;font:600 20px/1.2 var(--f-display);letter-spacing:-.01em}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12px;color:var(--ink-2)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.sw{width:14px;height:10px;border-radius:2px;display:inline-block}
+.sw.f{background:var(--free-bg);border:1px solid var(--free-line)}
+.sw.b{background:var(--bar)}
+.sw.c{width:2px;height:12px;background:var(--accent);border-radius:0}
+.tl-note{margin:0 16px 8px;font-size:12px;color:var(--ink-3)}
+.tl-scroll{overflow-x:auto;padding-inline:16px}
+.tl{--lw:80px;--pr:20px;position:relative;isolation:isolate;min-width:700px;padding-bottom:30px;user-select:none;-webkit-user-select:none}
+.tl-row{display:grid;grid-template-columns:var(--lw) minmax(0,1fr);padding-right:var(--pr);margin-top:4px;align-items:center}
+.tl-row.grp{margin-top:12px}
+.tl-label{position:sticky;left:0;z-index:3;background:var(--surface);align-self:stretch;display:flex;align-items:center;gap:7px;font:500 12px/1 var(--f-mono);color:var(--ink-2)}
+.tl-label::before{content:"";width:8px;height:8px;border-radius:50%;border:1.5px solid var(--ink-3);flex:none}
+.tl-row[data-state="free"] .tl-label{color:var(--ink)}
+.tl-row[data-state="free"] .tl-label::before{background:var(--free);border-color:var(--free)}
+.tl-row.axis{margin-top:0;height:22px}
+.tl-row.axis .tl-label::before{display:none}
+.tl-axis{position:relative;height:100%;font:400 11px/1 var(--f-mono);color:var(--ink-3)}
+.tl-axis span{position:absolute;top:4px;transform:translateX(-50%)}
+.tl-track{position:relative;background:var(--free-bg);border-radius:4px}
+.bar{
+  position:absolute;z-index:2;display:flex;align-items:center;justify-content:center;overflow:hidden;
+  background:var(--bar);color:var(--bar-ink);font:500 10px/1 var(--f-mono);border-right:1px solid var(--surface);
+}
+.tl-lines{position:absolute;z-index:1;left:var(--lw);right:var(--pr);top:22px;bottom:30px;pointer-events:none}
+.tl-lines i{position:absolute;top:0;bottom:0;width:1px;background:var(--grid)}
+.cursor{
+  position:absolute;z-index:4;top:22px;bottom:30px;width:0;pointer-events:none;
+  left:calc(var(--lw) + (100% - var(--lw) - var(--pr)) * var(--f,0));
+  border-left:2px solid var(--accent);box-shadow:0 0 0 1px var(--surface);
+}
+.cursor::after{
+  content:attr(data-t);position:absolute;top:100%;left:0;transform:translateX(-50%);margin-top:4px;
+  padding:3px 7px;border-radius:5px;background:var(--accent);color:var(--accent-ink);font:500 12px/1 var(--f-mono);white-space:nowrap;
+}
+.tl{cursor:crosshair}
+.tl .tl-label{cursor:default}
+
+/* notes */
+.notes{padding:0;max-width:72ch}
+.notes h2{margin:0 0 8px;font:600 17px/1.2 var(--f-display)}
+.notes ul{margin:0;padding-left:18px;color:var(--ink-2);font-size:14px;display:flex;flex-direction:column;gap:6px}
+.notes b{color:var(--ink);font-weight:600}
+@media (prefers-reduced-motion: no-preference){
+  .day,.chip,.step{transition:background-color .12s,border-color .12s}
+}
+</style>
+
+<div class="app">
+  <header class="top">
+    <p class="eyebrow">IISER Pune · lecture halls · Schedule_07_09_2026.pdf</p>
+    <h1>Which room is free?</h1>
+    <p class="lede">Pick a day and a time. Rooms in LHC and NLH with no class scheduled appear first, with how long they stay free.</p>
+  </header>
+
+  <div class="layout">
+    <section class="card controls" aria-label="Day and time">
+      <div>
+        <div class="label-row"><span class="label" id="day-label">Day</span><span class="hint" id="today-hint"></span></div>
+        <div class="days" id="days" role="group" aria-labelledby="day-label"></div>
+      </div>
+
+      <div>
+        <div class="label-row"><label class="label" for="time">Time</label><button class="link" id="now" type="button">Jump to now</button></div>
+        <div class="time-row">
+          <button class="step" id="back" type="button" aria-label="15 minutes earlier">−15</button>
+          <input class="time-in" id="time" type="time" value="10:00">
+          <button class="step" id="fwd" type="button" aria-label="15 minutes later">+15</button>
+        </div>
+        <div class="slider-wrap">
+          <input class="slider" id="slider" type="range" min="510" max="1140" step="5" value="600" aria-label="Scrub through the day, 08:30 to 19:00">
+          <div class="ticks" id="ticks" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="label-row"><span class="label" id="slot-label">Jump to a class start</span></div>
+        <div class="chips" id="slots" role="group" aria-labelledby="slot-label"></div>
+      </div>
+
+      <div>
+        <div class="label-row"><span class="label" id="dur-label">Free for at least</span></div>
+        <div class="chips" id="durs" role="group" aria-labelledby="dur-label"></div>
+      </div>
+    </section>
+
+    <section class="answer" aria-live="polite" aria-label="Free rooms">
+      <p class="when" id="when"></p>
+      <h2 class="count" id="count"></h2>
+      <p class="sub" id="next"></p>
+      <p class="banner" id="banner" hidden></p>
+      <div class="tiles" id="free"></div>
+      <div id="partial-wrap" hidden>
+        <h3 class="sec">Free now, but not long enough</h3>
+        <div class="soon-list" id="partial"></div>
+      </div>
+      <h3 class="sec">In use at this time</h3>
+      <p class="hint">Soonest to free up first.</p>
+      <ul class="busy" id="busy"></ul>
+    </section>
+  </div>
+
+  <section class="card tl-card" aria-label="Whole day timeline">
+    <div class="tl-head">
+      <h2 id="tl-title">Whole day</h2>
+      <div class="legend" aria-hidden="true">
+        <span><i class="sw f"></i>No class</span>
+        <span><i class="sw b"></i>Class (I, II, III–IV = year)</span>
+        <span><i class="sw c"></i>Selected time</span>
+      </div>
+    </div>
+    <p class="tl-note">Click or drag across the grid to move the selected time. On a phone, tap and scroll sideways.</p>
+    <div class="tl-scroll"><div class="tl" id="tl"></div></div>
+  </section>
+
+  <section class="notes" aria-label="About this data">
+    <h2>What this does and does not know</h2>
+    <ul>
+      <li><b>Only scheduled classes count.</b> A room shows as free when the timetable has nothing in it. Labs, exams, club bookings and cancelled classes are not in the file, so confirm before you rely on a room.</li>
+      <li><b>Only rooms in the timetable are listed.</b> A room that never appears in the PDF cannot be reported as free. Mon–Fri only.</li>
+      <li><b>NLH holds several halls.</b> The timetable lists it as one location, and Year I and Year II sometimes meet there at the same moment. “In use” for NLH means at least one class is on; a hall inside it may still be empty.</li>
+      <li><b>Short changeovers count as use.</b> Back-to-back classes in one room with 5 minutes or less between them are treated as one block. The 15-minute break after the 08:45 slot and the lunch gap do show as free.</li>
+      <li><b>Multi-room cells.</b> Where one PDF cell lists several rooms (for example Wednesday 14:00–15:55 for Year I), every listed room is marked in use. LHC 301 on Friday 14:00 is listed for both Year I and Year III &amp; IV.</li>
+    </ul>
+  </section>
+</div>
+
+<script>
+/* Core availability logic. Pure functions, no DOM. */
+(function (root) {
+  'use strict';
+
+  // Back-to-back classes in one room separated by this many minutes or fewer
+  // are treated as a single block (students are still changing over).
+  var GAP = 5;
+  var WEEK = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+  function toMin(s) {
+    var p = s.split(':');
+    return parseInt(p[0], 10) * 60 + parseInt(p[1], 10);
+  }
+
+  function fmt(m) {
+    var h = Math.floor(m / 60), mm = m % 60;
+    return (h < 10 ? '0' : '') + h + ':' + (mm < 10 ? '0' : '') + mm;
+  }
+
+  function roomKey(name) {
+    // NLH first, then LHC by number.
+    var m = /^([A-Za-z]+)\s*(\d+)?$/.exec(name.trim());
+    var b = m ? m[1].toUpperCase() : name;
+    var n = m && m[2] ? parseInt(m[2], 10) : 0;
+    return [b === 'NLH' ? 0 : 1, b, n];
+  }
+
+  function roomGroup(name) {
+    var m = /^LHC\s*(\d)\d\d$/.exec(name.trim());
+    if (m) return 'LHC ' + m[1] + 'xx';
+    return name.trim();
+  }
+
+  function merge(list) {
+    var a = list.slice().sort(function (x, y) { return x.s - y.s || x.e - y.e; });
+    var out = [];
+    a.forEach(function (sg) {
+      var last = out[out.length - 1];
+      if (last && sg.s <= last.e + GAP) {
+        last.e = Math.max(last.e, sg.e);
+        last.segs.push(sg);
+      } else {
+        out.push({ s: sg.s, e: sg.e, segs: [sg] });
+      }
+    });
+    return out;
+  }
+
+  function buildModel(data) {
+    var segs = {};      // room -> day -> [{s,e,yr}]
+    var present = {};
+    Object.keys(data.year_groups).forEach(function (yr) {
+      data.year_groups[yr].forEach(function (rec) {
+        var t = rec.time.split('-');
+        var s = toMin(t[0].trim()), e = toMin(t[1].trim());
+        present[rec.day] = true;
+        rec.room_number.split(',').forEach(function (raw) {
+          var room = raw.trim();
+          if (!room) return;
+          if (!segs[room]) segs[room] = {};
+          if (!segs[room][rec.day]) segs[room][rec.day] = [];
+          segs[room][rec.day].push({ s: s, e: e, yr: yr });
+        });
+      });
+    });
+
+    var rooms = Object.keys(segs).sort(function (a, b) {
+      var ka = roomKey(a), kb = roomKey(b);
+      return ka[0] - kb[0] || (ka[1] < kb[1] ? -1 : ka[1] > kb[1] ? 1 : 0) || ka[2] - kb[2];
+    });
+    var days = WEEK.filter(function (d) { return present[d]; });
+
+    var blocks = {};
+    var bounds = {};
+    var starts = {};
+    days.forEach(function (d) {
+      var lo = Infinity, hi = -Infinity, st = {};
+      rooms.forEach(function (r) {
+        var list = (segs[r] && segs[r][d]) || [];
+        if (!blocks[r]) blocks[r] = {};
+        blocks[r][d] = merge(list);
+        list.forEach(function (g) {
+          lo = Math.min(lo, g.s); hi = Math.max(hi, g.e); st[g.s] = true;
+        });
+      });
+      bounds[d] = { s: lo, e: hi };
+      starts[d] = Object.keys(st).map(Number).sort(function (a, b) { return a - b; });
+    });
+
+    return { rooms: rooms, days: days, segs: segs, blocks: blocks, bounds: bounds, starts: starts };
+  }
+
+  // State of one room at minute t on a day. d = minutes the room is needed for (0 = just at t).
+  function status(model, room, day, t, d) {
+    var bl = (model.blocks[room] && model.blocks[room][day]) || [];
+    var cur = null, nxt = null, i;
+    for (i = 0; i < bl.length; i++) {
+      if (bl[i].s <= t && t < bl[i].e) { cur = bl[i]; break; }
+      if (bl[i].s > t) { nxt = bl[i]; break; }
+    }
+    if (cur) {
+      var act = cur.segs.filter(function (g) { return g.s <= t && t < g.e; });
+      if (!act.length) {
+        // inside a short changeover gap: report the class about to start
+        var later = cur.segs.filter(function (g) { return g.s > t; });
+        var ns = Math.min.apply(null, later.map(function (g) { return g.s; }));
+        act = later.filter(function (g) { return g.s === ns; });
+      }
+      var years = [];
+      act.forEach(function (g) { if (years.indexOf(g.yr) < 0) years.push(g.yr); });
+      return { room: room, state: 'busy', until: cur.e, years: years, classes: act.length };
+    }
+    var nextStart = nxt ? nxt.s : null;
+    var freeFor = nxt ? nxt.s - t : Infinity;
+    var fits = !d || freeFor >= d;
+    return { room: room, state: fits ? 'free' : 'partial', nextStart: nextStart, freeFor: freeFor };
+  }
+
+  function freeCount(model, day, t) {
+    var n = 0;
+    model.rooms.forEach(function (r) { if (status(model, r, day, t, 0).state === 'free') n++; });
+    return n;
+  }
+
+  // Next minute after t at which any room changes between free and busy.
+  function nextChange(model, day, t) {
+    var best = null;
+    model.rooms.forEach(function (r) {
+      (model.blocks[r][day] || []).forEach(function (b) {
+        [b.s, b.e].forEach(function (x) { if (x > t && (best === null || x < best)) best = x; });
+      });
+    });
+    if (best === null) return null;
+    return { t: best, delta: freeCount(model, day, best) - freeCount(model, day, t) };
+  }
+
+  // Lane-pack one room's raw segments so overlapping classes (e.g. NLH) do not draw on top of each other.
+  function lanes(model, room, day) {
+    var list = ((model.segs[room] && model.segs[room][day]) || []).slice()
+      .sort(function (x, y) { return x.s - y.s || x.e - y.e; });
+    var ends = [], items = [];
+    list.forEach(function (g) {
+      var li = -1, k;
+      for (k = 0; k < ends.length; k++) { if (ends[k] <= g.s) { li = k; break; } }
+      if (li < 0) li = ends.length;
+      ends[li] = g.e;
+      items.push({ s: g.s, e: g.e, de: g.e, yr: g.yr, lane: li });
+    });
+    // bridge changeover gaps within a lane so the bar reads as one block
+    for (var ln = 0; ln < ends.length; ln++) {
+      var inLane = items.filter(function (x) { return x.lane === ln; });
+      for (var i = 0; i < inLane.length - 1; i++) {
+        if (inLane[i + 1].s - inLane[i].e <= GAP) inLane[i].de = inLane[i + 1].s;
+      }
+    }
+    return { items: items, count: Math.max(1, ends.length) };
+  }
+
+  var api = {
+    GAP: GAP, toMin: toMin, fmt: fmt, roomGroup: roomGroup, buildModel: buildModel,
+    status: status, freeCount: freeCount, nextChange: nextChange, lanes: lanes
+  };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api;
+  else root.Core = api;
+})(typeof window !== 'undefined' ? window : this);
+
+</script>
+<script>
+var DATA = {"title":"IISER Pune timetable \u2014 day, time, room","source_file":"Schedule_07_09_2026.pdf","fields":{"day":"Weekday as printed in the timetable","time":"Time slot as printed in the timetable","room_number":"Room identifier as printed in the adjacent room column"},"year_groups":{"Year I":[{"day":"Monday","time":"08:45-09:45","room_number":"NLH"},{"day":"Monday","time":"10:00-10:55","room_number":"NLH"},{"day":"Monday","time":"11:00-11:55","room_number":"NLH"},{"day":"Monday","time":"12:00-12:55","room_number":"NLH"},{"day":"Monday","time":"14:00-14:55","room_number":"NLH"},{"day":"Monday","time":"15:00-15:55","room_number":"NLH"},{"day":"Monday","time":"16:00-16:55","room_number":"NLH"},{"day":"Monday","time":"17:00-17:55","room_number":"NLH"},{"day":"Monday","time":"18:00-18:55","room_number":"NLH"},{"day":"Tuesday","time":"08:45-09:45","room_number":"NLH"},{"day":"Tuesday","time":"10:00-12:00","room_number":"NLH"},{"day":"Tuesday","time":"14:00-14:55","room_number":"NLH"},{"day":"Tuesday","time":"15:00-15:55","room_number":"NLH"},{"day":"Tuesday","time":"16:00-16:55","room_number":"NLH"},{"day":"Wednesday","time":"08:45-09:45","room_number":"NLH"},{"day":"Wednesday","time":"14:00-15:55","room_number":"NLH, LHC 105, LHC 106, LHC 107, LHC 108, LHC 201, LHC 203, LHC 206"},{"day":"Wednesday","time":"16:00-17:55","room_number":"NLH, LHC 105, LHC 106, LHC 107, LHC 108"},{"day":"Thursday","time":"08:45-09:45","room_number":"NLH"},{"day":"Thursday","time":"10:00-10:55","room_number":"NLH"},{"day":"Thursday","time":"11:00-11:55","room_number":"NLH"},{"day":"Thursday","time":"12:00-12:55","room_number":"NLH"},{"day":"Thursday","time":"14:00-14:55","room_number":"NLH"},{"day":"Thursday","time":"15:00-15:55","room_number":"NLH"},{"day":"Thursday","time":"16:00-16:55","room_number":"NLH"},{"day":"Thursday","time":"17:00-17:55","room_number":"NLH"},{"day":"Thursday","time":"18:00-18:55","room_number":"NLH"},{"day":"Friday","time":"08:45-09:45","room_number":"NLH"},{"day":"Friday","time":"10:00-12:00","room_number":"NLH"},{"day":"Friday","time":"14:00-14:55","room_number":"NLH, LHC 105, LHC 106, LHC 107, LHC 108, LHC 205, LHC 303, LHC 301"},{"day":"Friday","time":"15:00-15:55","room_number":"NLH"}],"Year II":[{"day":"Monday","time":"09:00-09:55","room_number":"LHC 101"},{"day":"Monday","time":"10:00-10:55","room_number":"LHC 101"},{"day":"Monday","time":"11:00-11:55","room_number":"NLH"},{"day":"Monday","time":"12:00-12:55","room_number":"NLH"},{"day":"Monday","time":"14:00-14:55","room_number":"LHC 101"},{"day":"Monday","time":"15:00-15:55","room_number":"LHC 101"},{"day":"Monday","time":"16:00-16:55","room_number":"LHC 101"},{"day":"Monday","time":"17:00-17:55","room_number":"LHC 101"},{"day":"Tuesday","time":"09:00-09:55","room_number":"LHC 101"},{"day":"Tuesday","time":"10:00-10:55","room_number":"NLH"},{"day":"Tuesday","time":"11:00-11:55","room_number":"NLH"},{"day":"Tuesday","time":"12:00-12:55","room_number":"NLH, LHC 105, LHC 106, LHC 107, LHC 108, LHC 306"},{"day":"Tuesday","time":"14:00-14:55","room_number":"LHC 103"},{"day":"Tuesday","time":"15:00-15:55","room_number":"LHC 101"},{"day":"Tuesday","time":"16:00-16:55","room_number":"LHC 101"},{"day":"Wednesday","time":"09:00-09:55","room_number":"LHC 101"},{"day":"Wednesday","time":"10:00-10:55","room_number":"NLH"},{"day":"Wednesday","time":"11:00-11:55","room_number":"NLH"},{"day":"Wednesday","time":"12:00-12:55","room_number":"NLH"},{"day":"Wednesday","time":"14:00-14:55","room_number":"NLH"},{"day":"Wednesday","time":"15:00-15:55","room_number":"NLH"},{"day":"Thursday","time":"09:00-09:55","room_number":"LHC 101"},{"day":"Thursday","time":"10:00-10:55","room_number":"NLH, LHC 105, LHC 106, LHC 107, LHC 108, LHC 303"},{"day":"Thursday","time":"11:00-11:55","room_number":"NLH"},{"day":"Thursday","time":"12:00-12:55","room_number":"NLH"},{"day":"Thursday","time":"14:00-14:55","room_number":"LHC 101"},{"day":"Thursday","time":"15:00-15:55","room_number":"NLH"},{"day":"Friday","time":"09:00-09:55","room_number":"LHC 101"},{"day":"Friday","time":"10:00-10:55","room_number":"NLH, LHC 105, LHC 106, LHC 107, LHC 108, LHC 205"},{"day":"Friday","time":"11:00-11:55","room_number":"NLH"},{"day":"Friday","time":"12:00-12:55","room_number":"NLH"},{"day":"Friday","time":"14:00-14:55","room_number":"LHC 101"},{"day":"Friday","time":"15:00-15:55","room_number":"LHC 101"},{"day":"Friday","time":"16:00-16:55","room_number":"LHC 101"},{"day":"Friday","time":"17:00-17:55","room_number":"LHC 101"}],"Year III & IV":[{"day":"Monday","time":"09:00-09:55","room_number":"LHC 306"},{"day":"Monday","time":"10:00-10:55","room_number":"LHC 201"},{"day":"Monday","time":"11:00-11:55","room_number":"LHC 201"},{"day":"Monday","time":"12:00-12:55","room_number":"LHC 203"},{"day":"Monday","time":"14:00-14:55","room_number":"LHC 301"},{"day":"Monday","time":"15:00-15:55","room_number":"LHC 304"},{"day":"Monday","time":"16:00-16:55","room_number":"LHC 301"},{"day":"Monday","time":"17:00-17:55","room_number":"LHC 203"},{"day":"Tuesday","time":"09:00-09:55","room_number":"LHC 306"},{"day":"Tuesday","time":"10:00-10:55","room_number":"LHC 201"},{"day":"Tuesday","time":"11:00-11:55","room_number":"LHC 201"},{"day":"Tuesday","time":"12:00-12:55","room_number":"LHC 203"},{"day":"Tuesday","time":"14:00-14:55","room_number":"LHC 203"},{"day":"Tuesday","time":"15:00-15:55","room_number":"LHC 301"},{"day":"Tuesday","time":"16:00-16:55","room_number":"LHC 205"},{"day":"Tuesday","time":"17:00-17:55","room_number":"LHC 301"},{"day":"Wednesday","time":"09:00-09:55","room_number":"LHC 201"},{"day":"Wednesday","time":"10:00-10:55","room_number":"LHC 201"},{"day":"Wednesday","time":"11:00-11:55","room_number":"LHC 203"},{"day":"Wednesday","time":"12:00-12:55","room_number":"LHC 203"},{"day":"Wednesday","time":"14:00-14:55","room_number":"LHC 205"},{"day":"Wednesday","time":"15:00-15:55","room_number":"LHC 301"},{"day":"Thursday","time":"09:00-09:55","room_number":"LHC 306"},{"day":"Thursday","time":"10:00-10:55","room_number":"LHC 201"},{"day":"Thursday","time":"11:00-11:55","room_number":"LHC 201"},{"day":"Thursday","time":"12:00-12:55","room_number":"LHC 203"},{"day":"Thursday","time":"14:00-14:55","room_number":"LHC 301"},{"day":"Thursday","time":"15:00-15:55","room_number":"LHC 304"},{"day":"Thursday","time":"16:00-16:55","room_number":"LHC 301"},{"day":"Thursday","time":"17:00-17:55","room_number":"LHC 203"},{"day":"Friday","time":"09:00-09:55","room_number":"LHC 201"},{"day":"Friday","time":"10:00-10:55","room_number":"LHC 201"},{"day":"Friday","time":"11:00-11:55","room_number":"LHC 201"},{"day":"Friday","time":"12:00-12:55","room_number":"LHC 203"},{"day":"Friday","time":"14:00-14:55","room_number":"LHC 301"},{"day":"Friday","time":"15:00-15:55","room_number":"LHC 304"},{"day":"Friday","time":"16:00-16:55","room_number":"LHC 203"}]},"notes":["Only day, time, and room_number are included in each timetable record.","Repeated room numbers are retained when they correspond to distinct day/time slots.","Some PDF cells span multiple rows or list multiple rooms; room lists are retained as printed rather than split into guessed individual assignments."]};
+(function () {
+  'use strict';
+  var model = Core.buildModel(DATA);
+  var days = model.days;
+  var fmt = Core.fmt;
+  var SHORT = { Monday: 'Mon', Tuesday: 'Tue', Wednesday: 'Wed', Thursday: 'Thu', Friday: 'Fri', Saturday: 'Sat', Sunday: 'Sun' };
+  var WD = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  var YR = { 'Year I': 'I', 'Year II': 'II', 'Year III & IV': 'III–IV' };
+  var DURS = [[0, 'Any'], [30, '30 min'], [60, '1 hour'], [120, '2 hours']];
+  var TL0 = 510, TL1 = 1140, TLW = TL1 - TL0, LANE = 22;
+
+  function $(id) { return document.getElementById(id); }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function long(n) {
+    var h = Math.floor(n / 60), m = n % 60;
+    if (!h) return m + ' min';
+    return m ? h + ' h ' + (m < 10 ? '0' : '') + m + ' min' : h + ' h';
+  }
+  function durName(d) { return d === 30 ? '30 minutes' : d === 60 ? '1 hour' : '2 hours'; }
+
+  /* ---- initial state: the real current moment when school is in session, else a sample slot ---- */
+  var nowD = new Date();
+  var todayName = WD[nowD.getDay()];
+  var nowT = nowD.getHours() * 60 + nowD.getMinutes();
+  function inHours(day, t) { var b = model.bounds[day]; return !!b && t >= b.s && t < b.e; }
+  var state = { day: days[0], t: 600, d: 0 };
+  if (days.indexOf(todayName) >= 0) {
+    state.day = todayName;
+    if (inHours(todayName, nowT)) state.t = nowT;
+  }
+  var builtDay = null;
+
+  /* ---- controls ---- */
+  var daysEl = $('days');
+  days.forEach(function (d) {
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'day' + (d === todayName ? ' today' : '');
+    b.textContent = SHORT[d]; b.dataset.day = d; b.setAttribute('aria-label', d + (d === todayName ? ' (today)' : ''));
+    daysEl.appendChild(b);
+  });
+  if (days.indexOf(todayName) >= 0) $('today-hint').textContent = 'dot marks today';
+  daysEl.addEventListener('click', function (e) {
+    var b = e.target.closest('.day'); if (!b) return;
+    state.day = b.dataset.day; render();
+  });
+
+  var dursEl = $('durs');
+  DURS.forEach(function (x) {
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'chip dur'; b.textContent = x[1]; b.dataset.d = x[0];
+    dursEl.appendChild(b);
+  });
+  dursEl.addEventListener('click', function (e) {
+    var b = e.target.closest('.chip'); if (!b) return;
+    state.d = parseInt(b.dataset.d, 10); render();
+  });
+
+  var ticks = $('ticks');
+  for (var h = 9; h <= 19; h += 2) {
+    var sp = document.createElement('span');
+    sp.style.left = 'calc(8px + (100% - 16px) * ' + ((h * 60 - TL0) / TLW).toFixed(4) + ')';
+    sp.textContent = (h < 10 ? '0' : '') + h;
+    ticks.appendChild(sp);
+  }
+
+  function buildSlots() {
+    var wrap = $('slots'); wrap.innerHTML = '';
+    model.starts[state.day].forEach(function (s) {
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'chip'; b.textContent = fmt(s); b.dataset.t = s;
+      wrap.appendChild(b);
+    });
+  }
+  $('slots').addEventListener('click', function (e) {
+    var b = e.target.closest('.chip'); if (!b) return;
+    setT(parseInt(b.dataset.t, 10));
+  });
+
+  function setT(t) { state.t = Math.max(0, Math.min(1439, t)); render(); }
+  $('time').addEventListener('input', function (e) {
+    if (!e.target.value) return;
+    state.t = Core.toMin(e.target.value); render();
+  });
+  $('slider').addEventListener('input', function (e) { setT(parseInt(e.target.value, 10)); });
+  $('back').addEventListener('click', function () { setT(state.t - 15); });
+  $('fwd').addEventListener('click', function () { setT(state.t + 15); });
+  $('now').addEventListener('click', function () {
+    var n = new Date();
+    var wd = WD[n.getDay()];
+    if (days.indexOf(wd) >= 0) state.day = wd;
+    state.t = n.getHours() * 60 + n.getMinutes();
+    render();
+  });
+
+  function syncControls() {
+    Array.prototype.forEach.call(daysEl.children, function (b) { b.setAttribute('aria-pressed', String(b.dataset.day === state.day)); });
+    Array.prototype.forEach.call(dursEl.children, function (b) { b.setAttribute('aria-pressed', String(parseInt(b.dataset.d, 10) === state.d)); });
+    Array.prototype.forEach.call($('slots').children, function (b) { b.setAttribute('aria-pressed', String(parseInt(b.dataset.t, 10) === state.t)); });
+    var tv = fmt(state.t);
+    if ($('time').value !== tv) $('time').value = tv;
+    var sv = String(Math.max(TL0, Math.min(TL1, state.t)));
+    if ($('slider').value !== sv) $('slider').value = sv;
+  }
+
+  /* ---- answer ---- */
+  function freeTile(x) {
+    var detail = x.nextStart === null ? 'Free for the rest of the day' : 'Free until <b>' + fmt(x.nextStart) + '</b>';
+    var meta = x.freeFor === Infinity ? '' : '<p class="meta">' + long(x.freeFor) + '</p>';
+    return '<article class="tile"><div class="tile-top"><span class="room">' + esc(x.room) +
+      '</span><span class="state"><i class="dot"></i>Free</span></div><p class="detail">' + detail + '</p>' + meta + '</article>';
+  }
+
+  function renderAnswer() {
+    var order = {};
+    model.rooms.forEach(function (r, i) { order[r] = i; });
+    var rows = model.rooms.map(function (r) { return Core.status(model, r, state.day, state.t, state.d); });
+    var free = rows.filter(function (x) { return x.state === 'free'; })
+      .sort(function (a, b) { return (b.freeFor - a.freeFor) || (order[a.room] - order[b.room]) || 0; });
+    var part = rows.filter(function (x) { return x.state === 'partial'; })
+      .sort(function (a, b) { return (b.freeFor - a.freeFor) || (order[a.room] - order[b.room]); });
+    var busy = rows.filter(function (x) { return x.state === 'busy'; })
+      .sort(function (a, b) { return (a.until - b.until) || (order[a.room] - order[b.room]); });
+
+    $('when').textContent = state.day + ' · ' + fmt(state.t);
+    var n = free.length, total = model.rooms.length;
+    $('count').innerHTML = '<span class="big' + (n ? '' : ' none') + '">' + n + '</span> of ' + total + ' rooms free' +
+      (state.d ? ' for at least ' + durName(state.d) : '');
+
+    var nc = Core.nextChange(model, state.day, state.t);
+    $('next').textContent = nc
+      ? 'Next change at ' + fmt(nc.t) + (nc.delta > 0 ? ' · ' + nc.delta + ' more free' : nc.delta < 0 ? ' · ' + (-nc.delta) + ' fewer free' : '')
+      : 'No further changes today.';
+
+    var b = model.bounds[state.day], ban = $('banner');
+    if (!inHours(state.day, state.t)) {
+      ban.hidden = false;
+      ban.textContent = 'Classes on ' + state.day + ' run ' + fmt(b.s) + ' to ' + fmt(b.e) + '. Nothing is scheduled at ' + fmt(state.t) + ', so every room reads as free.';
+    } else { ban.hidden = true; }
+
+    if (free.length) {
+      $('free').innerHTML = free.map(freeTile).join('');
+    } else {
+      var first = busy[0];
+      $('free').innerHTML = '<p class="empty">No room is free' + (state.d ? ' for ' + durName(state.d) : '') + ' at ' + fmt(state.t) + '.' +
+        (first ? ' ' + esc(first.room) + ' opens up first, at ' + fmt(first.until) + '.' : '') + '</p>';
+    }
+
+    $('partial-wrap').hidden = !part.length;
+    $('partial').innerHTML = part.map(function (x) {
+      return '<span class="soon"><span class="room">' + esc(x.room) + '</span><span class="mono">free ' + long(x.freeFor) + ' only</span></span>';
+    }).join('');
+
+    $('busy').innerHTML = busy.length ? busy.map(function (x) {
+      var who = x.years.join(' + ');
+      if (x.classes > 1) who += ' · ' + x.classes + ' classes at once';
+      var extra = x.room === 'NLH' ? ' · several halls, one may be empty' : '';
+      return '<li><span class="room">' + esc(x.room) + '</span><span class="until">until ' + fmt(x.until) + '</span>' +
+        '<span class="who">' + esc(who) + esc(extra) + '</span></li>';
+    }).join('') : '<li><span class="room">Nothing</span><span class="until">all free</span></li>';
+  }
+
+  /* ---- timeline ---- */
+  function renderTimeline() {
+    $('tl-title').textContent = 'Whole day, ' + state.day;
+    var html = '<div class="tl-row axis"><div class="tl-label"></div><div class="tl-axis">';
+    for (var h = 9; h <= 18; h++) html += '<span style="left:' + (((h * 60 - TL0) / TLW) * 100).toFixed(3) + '%">' + (h < 10 ? '0' : '') + h + '</span>';
+    html += '</div></div><div class="tl-lines">';
+    for (var k = 9; k <= 18; k++) html += '<i style="left:' + (((k * 60 - TL0) / TLW) * 100).toFixed(3) + '%"></i>';
+    html += '</div>';
+
+    var lastGroup = null;
+    model.rooms.forEach(function (r) {
+      var g = Core.roomGroup(r);
+      var L = Core.lanes(model, r, state.day);
+      var cls = 'tl-row' + (lastGroup !== null && g !== lastGroup ? ' grp' : '');
+      lastGroup = g;
+      html += '<div class="' + cls + '" data-room="' + esc(r) + '"><div class="tl-label">' + esc(r) + '</div>' +
+        '<div class="tl-track" style="height:' + (L.count * LANE + 2) + 'px">';
+      L.items.forEach(function (it) {
+        var s = Math.max(TL0, it.s), e = Math.min(TL1, it.de);
+        html += '<div class="bar" title="' + esc(r + ' · ' + it.yr + ' · ' + fmt(it.s) + '–' + fmt(it.e)) + '" style="left:' +
+          (((s - TL0) / TLW) * 100).toFixed(3) + '%;width:' + (((e - s) / TLW) * 100).toFixed(3) + '%;top:' + (2 + it.lane * LANE) +
+          'px;height:' + (LANE - 2) + 'px">' + esc(YR[it.yr] || it.yr) + '</div>';
+      });
+      html += '</div></div>';
+    });
+    html += '<div class="cursor" id="cursor"></div>';
+    $('tl').innerHTML = html;
+  }
+
+  function updateCursor() {
+    var c = $('cursor'); if (!c) return;
+    c.hidden = state.t < TL0 || state.t > TL1;
+    c.style.setProperty('--f', ((state.t - TL0) / TLW).toFixed(5));
+    c.setAttribute('data-t', fmt(state.t));
+    Array.prototype.forEach.call($('tl').querySelectorAll('.tl-row[data-room]'), function (row) {
+      row.dataset.state = Core.status(model, row.dataset.room, state.day, state.t, 0).state;
+    });
+  }
+
+  var tl = $('tl'), dragging = false;
+  function setFromX(x) {
+    var tr = tl.querySelector('.tl-track'); if (!tr) return;
+    var r = tr.getBoundingClientRect();
+    var f = Math.max(0, Math.min(1, (x - r.left) / r.width));
+    setT(Math.round((TL0 + f * TLW) / 5) * 5);
+  }
+  tl.addEventListener('click', function (e) { if (!e.target.closest('.tl-label')) setFromX(e.clientX); });
+  tl.addEventListener('pointerdown', function (e) {
+    if (e.pointerType === 'mouse' && e.button === 0 && !e.target.closest('.tl-label')) {
+      dragging = true;
+      try { tl.setPointerCapture(e.pointerId); } catch (err) { /* ignore */ }
+    }
+  });
+  tl.addEventListener('pointermove', function (e) { if (dragging) setFromX(e.clientX); });
+  ['pointerup', 'pointercancel'].forEach(function (n) { tl.addEventListener(n, function () { dragging = false; }); });
+
+  /* ---- render ---- */
+  function render() {
+    if (builtDay !== state.day) { buildSlots(); renderTimeline(); builtDay = state.day; }
+    syncControls();
+    renderAnswer();
+    updateCursor();
+  }
+  render();
+})();
+</script>
+
+</body></html>
