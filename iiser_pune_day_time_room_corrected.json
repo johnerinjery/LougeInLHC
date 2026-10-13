@@ -1,0 +1,3785 @@
+{
+  "title": "IISER Pune timetable - day, time, room",
+  "source_file": "Schedule_07_09_2026.pdf",
+  "fields": {
+    "day": "Weekday as printed in the timetable",
+    "time": "Time the class occupies. Normally the time column it is printed in; widened when the PDF states a longer duration (e.g. \"(4-6pm)\", \"(12-1:30)\", \"(14:00-16:55)\") or the cell is merged across columns (labs 15:00-17:55)",
+    "room_number": "Room(s) as printed in that entry's own Room No. cell, comma-separated; null when the PDF prints no room",
+    "rooms": "Same rooms as a list",
+    "course_code": "Course code as printed (null for the Colloquium)",
+    "course_name": "Course name as printed, including tutorial/batch remarks",
+    "slot": "Slot letter (A-K) or label (Lab 1, Lab 2, Extra lab slot) from the day's header row",
+    "kind": "lecture | tutorial | lab | event | reserved (derived from the printed name/slot label)",
+    "notes": "Anything unusual about the cell"
+  },
+  "year_groups": {
+    "Year I": [
+      {
+        "day": "Monday",
+        "time": "08:45-09:45",
+        "room_number": "NLH",
+        "rooms": [
+          "NLH"
+        ],
+        "course_code": "TD1113",
+        "course_name": "Introduction to computing",
+        "slot": "A",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "10:00-13:00",
+        "room_number": null,
+        "rooms": [],
+        "course_code": "BI1123",
+        "course_name": "Experimental Biology",
+        "slot": null,
+        "kind": "lab",
+        "notes": [
+          "Batches: B1",
+          "No room printed in the timetable for this block"
+        ]
+      },
+      {
+        "day": "Monday",
+        "time": "10:00-13:00",
+        "room_number": null,
+        "rooms": [],
+        "course_code": "PH1123",
+        "course_name": "Physics Lab-I",
+        "slot": null,
+        "kind": "lab",
+        "notes": [
+          "Batches: B2",
+          "No room printed in the timetable for this block"
+        ]
+      },
+      {
+        "day": "Monday",
+        "time": "14:00-14:55",
+        "room_number": "NLH",
+        "rooms": [
+          "NLH"
+        ],
+        "course_code": "MT1113",
+        "course_name": "Calculus - I",
+        "slot": "I",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "15:00-15:55",
+        "room_number": "NLH",
+        "rooms": [
+          "NLH"
+        ],
+        "course_code": "PH1113",
+        "course_name": "Introductory Mechanics",
+        "slot": "H",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "16:00-16:55",
+        "room_number": "NLH",
+        "rooms": [
+          "NLH"
+        ],
+        "course_code": "EC1213",
+        "course_name": "Evolution of Earth and life",
+        "slot": "K",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "17:00-17:55",
+        "room_number": "NLH, LHC 105, LHC 106, LHC 107",
+        "rooms": [
+          "NLH",
+          "LHC 105",
+          "LHC 106",
+          "LHC 107"
+        ],
+        "course_code": "TD1123",
+        "course_name": "Academic Communication Skills (4 Tutorial)",
+        "slot": "J",
+        "kind": "tutorial"
+      },
+      {
+        "day": "Monday",
+        "time": "18:00-18:55",
+        "room_number": "NLH, LHC 105, LHC 106, LHC 107, LHC 108",
+        "rooms": [
+          "NLH",
+          "LHC 105",
+          "LHC 106",
+          "LHC 107",
+          "LHC 108"
+        ],
+        "course_code": "TD1123",
+        "course_name": "Academic Communication Skills (5 Tutorial)",
+        "slot": "J",
+        "kind": "tutorial"
+      },
+      {
+        "day": "Tuesday",
+        "time": "08:45-09:45",
+        "room_number": "NLH",
+        "rooms": [
+          "NLH"
+        ],
+        "course_code": "BI1113",
+        "course_name": "Introductory Biology - I",
+        "slot": "A",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "10:00-12:00",
+        "room_number": null,
+        "rooms": [],
+        "course_code": "TD1113",
+        "course_name": "Introduction to computing",
+        "slot": null,
+        "kind": "lab",
+        "notes": [
+          "Batches: B1,B4.1 (First half batch),B5",
+          "No room printed in the timetable for this block"
+        ]
+      },
+      {
+        "day": "Tuesday",
+        "time": "10:00-13:00",
+        "room_number": null,
+        "rooms": [],
+        "course_code": "BI1123",
+        "course_name": "Experimental Biology",
+        "slot": null,
+        "kind": "lab",
+        "notes": [
+          "Batches: B2",
+          "No room printed in the timetable for this block"
+        ]
+      },
+      {
+        "day": "Tuesday",
+        "time": "10:00-13:00",
+        "room_number": null,
+        "rooms": [],
+        "course_code": "PH1123",
+        "course_name": "Physics Lab-I",
+        "slot": null,
+        "kind": "lab",
+        "notes": [
+          "Batches: B3",
+          "No room printed in the timetable for this block"
+        ]
+      },
+      {
+        "day": "Tuesday",
+        "time": "15:00-15:55",
+        "room_number": "NLH",
+        "rooms": [
+          "NLH"
+        ],
+        "course_code": "PH1113",
+        "course_name": "Introductory Mechanics",
+        "slot": "H",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "16:00-16:55",
+        "room_number": "NLH",
+        "rooms": [
+          "NLH"
+        ],
+        "course_code": "EC1213",
+        "course_name": "Evolution of Earth and life",
+        "slot": "K",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "17:00-17:55",
+        "room_number": null,
+        "rooms": [],
+        "course_code": null,
+        "course_name": "Colloquium",
+        "slot": "Colloquium",
+        "kind": "event",
+        "notes": [
+          "Cell has no course code or room printed"
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "time": "08:45-09:45",
+        "room_number": "NLH",
+        "rooms": [
+          "NLH"
+        ],
+        "course_code": "CH1113",
+        "course_name": "Principles of Organic Chemistry",
+        "slot": "B",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "10:00-13:00",
+        "room_number": null,
+        "rooms": [],
+        "course_code": "BI1123",
+        "course_name": "Experimental Biology",
+        "slot": null,
+        "kind": "lab",
+        "notes": [
+          "Batches: B3",
+          "No room printed in the timetable for this block"
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "time": "10:00-13:00",
+        "room_number": null,
+        "rooms": [],
+        "course_code": "PH1123",
+        "course_name": "Physics Lab-I",
+        "slot": null,
+        "kind": "lab",
+        "notes": [
+          "Batches: B4",
+          "No room printed in the timetable for this block"
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "time": "14:00-14:55",
+        "room_number": null,
+        "rooms": [],
+        "course_code": null,
+        "course_name": "Tut",
+        "slot": "Tut",
+        "kind": "reserved",
+        "notes": [
+          "Slot is labelled \"Tut\" in the PDF; no course, room or batch is printed"
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "time": "15:00-15:55",
+        "room_number": "NLH, LHC 105, LHC 106, LHC 107, LHC 108, LHC 201, LHC 203, LHC 206",
+        "rooms": [
+          "NLH",
+          "LHC 105",
+          "LHC 106",
+          "LHC 107",
+          "LHC 108",
+          "LHC 201",
+          "LHC 203",
+          "LHC 206"
+        ],
+        "course_code": "BI1113",
+        "course_name": "Introductory Biology - Tutorial (8 batches)",
+        "slot": "Extra lab slot",
+        "kind": "tutorial"
+      },
+      {
+        "day": "Wednesday",
+        "time": "16:00-16:55",
+        "room_number": "NLH, LHC 105, LHC 106, LHC 107, LHC 108",
+        "rooms": [
+          "NLH",
+          "LHC 105",
+          "LHC 106",
+          "LHC 107",
+          "LHC 108"
+        ],
+        "course_code": "CH1113",
+        "course_name": "Principles of Organic Chemistry Tutorial (5 batches)",
+        "slot": null,
+        "kind": "tutorial"
+      },
+      {
+        "day": "Thursday",
+        "time": "08:45-09:45",
+        "room_number": "NLH",
+        "rooms": [
+          "NLH"
+        ],
+        "course_code": "BI1113",
+        "course_name": "Introductory Biology - I",
+        "slot": "A",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:00-13:00",
+        "room_number": null,
+        "rooms": [],
+        "course_code": "BI1123",
+        "course_name": "Experimental Biology",
+        "slot": null,
+        "kind": "lab",
+        "notes": [
+          "Batches: B4",
+          "No room printed in the timetable for this block"
+        ]
+      },
+      {
+        "day": "Thursday",
+        "time": "10:00-13:00",
+        "room_number": null,
+        "rooms": [],
+        "course_code": "PH1123",
+        "course_name": "Physics Lab-I",
+        "slot": null,
+        "kind": "lab",
+        "notes": [
+          "Batches: B5",
+          "No room printed in the timetable for this block"
+        ]
+      },
+      {
+        "day": "Thursday",
+        "time": "14:00-14:55",
+        "room_number": "NLH",
+        "rooms": [
+          "NLH"
+        ],
+        "course_code": "MT1113",
+        "course_name": "Calculus - I",
+        "slot": "I",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "15:00-15:55",
+        "room_number": "NLH, LHC 101, LHC 105, LHC 106, LHC 107, LHC 108, LHC 305, LHC 306",
+        "rooms": [
+          "NLH",
+          "LHC 101",
+          "LHC 105",
+          "LHC 106",
+          "LHC 107",
+          "LHC 108",
+          "LHC 305",
+          "LHC 306"
+        ],
+        "course_code": "PH1113",
+        "course_name": "Introductory Mechanics (Tutorial: 8 batches)",
+        "slot": "H",
+        "kind": "tutorial"
+      },
+      {
+        "day": "Thursday",
+        "time": "16:00-16:55",
+        "room_number": "NLH, LHC 105, LHC 106, LHC 107, LHC 108",
+        "rooms": [
+          "NLH",
+          "LHC 105",
+          "LHC 106",
+          "LHC 107",
+          "LHC 108"
+        ],
+        "course_code": "EC1213",
+        "course_name": "Evolution of Earth and life (Tutorial: 5 batches)",
+        "slot": "K",
+        "kind": "tutorial"
+      },
+      {
+        "day": "Thursday",
+        "time": "17:00-17:55",
+        "room_number": "NLH",
+        "rooms": [
+          "NLH"
+        ],
+        "course_code": "TD1123",
+        "course_name": "Academic Communication Skills",
+        "slot": "J",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "18:00-18:55",
+        "room_number": "NLH",
+        "rooms": [
+          "NLH"
+        ],
+        "course_code": "TD1123",
+        "course_name": "Academic Communication Skills",
+        "slot": "J",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "08:45-09:45",
+        "room_number": "NLH",
+        "rooms": [
+          "NLH"
+        ],
+        "course_code": "CH1113",
+        "course_name": "Principles of Organic Chemistry",
+        "slot": "B",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "10:00-12:00",
+        "room_number": null,
+        "rooms": [],
+        "course_code": "TD1113",
+        "course_name": "Introduction to computing",
+        "slot": null,
+        "kind": "lab",
+        "notes": [
+          "Batches: B2,B3, B4.2 (Other half batch)",
+          "No room printed in the timetable for this block"
+        ]
+      },
+      {
+        "day": "Friday",
+        "time": "10:00-13:00",
+        "room_number": null,
+        "rooms": [],
+        "course_code": "BI1123",
+        "course_name": "Experimental Biology",
+        "slot": null,
+        "kind": "lab",
+        "notes": [
+          "Batches: B5",
+          "No room printed in the timetable for this block"
+        ]
+      },
+      {
+        "day": "Friday",
+        "time": "10:00-13:00",
+        "room_number": null,
+        "rooms": [],
+        "course_code": "PH1123",
+        "course_name": "Physics Lab-I",
+        "slot": null,
+        "kind": "lab",
+        "notes": [
+          "Batches: B1",
+          "No room printed in the timetable for this block"
+        ]
+      },
+      {
+        "day": "Friday",
+        "time": "14:00-14:55",
+        "room_number": "NLH, LHC 105, LHC 106, LHC 107, LHC 108, LHC 205, LHC 303, LHC 301",
+        "rooms": [
+          "NLH",
+          "LHC 105",
+          "LHC 106",
+          "LHC 107",
+          "LHC 108",
+          "LHC 205",
+          "LHC 303",
+          "LHC 301"
+        ],
+        "course_code": "MT1113",
+        "course_name": "Calculus - I Tutorial (8 batches)",
+        "slot": "I",
+        "kind": "tutorial"
+      },
+      {
+        "day": "Friday",
+        "time": "15:00-15:55",
+        "room_number": null,
+        "rooms": [],
+        "course_code": null,
+        "course_name": "Tut",
+        "slot": "Tut",
+        "kind": "reserved",
+        "notes": [
+          "Slot is labelled \"Tut\" in the PDF; no course, room or batch is printed"
+        ]
+      },
+      {
+        "day": "Friday",
+        "time": "16:00-16:55",
+        "room_number": null,
+        "rooms": [],
+        "course_code": null,
+        "course_name": "Tut",
+        "slot": "Tut",
+        "kind": "reserved",
+        "notes": [
+          "Slot is labelled \"Tut\" in the PDF; no course, room or batch is printed"
+        ]
+      },
+      {
+        "day": "Friday",
+        "time": "17:00-17:55",
+        "room_number": null,
+        "rooms": [],
+        "course_code": null,
+        "course_name": "Tut",
+        "slot": "Tut",
+        "kind": "reserved",
+        "notes": [
+          "Slot is labelled \"Tut\" in the PDF; no course, room or batch is printed"
+        ]
+      }
+    ],
+    "Year II": [
+      {
+        "day": "Monday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 101",
+        "rooms": [
+          "LHC 101"
+        ],
+        "course_code": "EC2123",
+        "course_name": "Landscapes and Their Evolution (Elective)",
+        "slot": "A",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 101",
+        "rooms": [
+          "LHC 101"
+        ],
+        "course_code": "BI2123",
+        "course_name": "Introduction to Biological Systems (Elective)",
+        "slot": "B",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "11:00-11:55",
+        "room_number": "NLH",
+        "rooms": [
+          "NLH"
+        ],
+        "course_code": "PH2113",
+        "course_name": "Introductory Quantum Physics",
+        "slot": "E",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "12:00-12:55",
+        "room_number": "NLH",
+        "rooms": [
+          "NLH"
+        ],
+        "course_code": "CH2113",
+        "course_name": "Principles of Inorganic Chemistry",
+        "slot": "F",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "14:00-14:55",
+        "room_number": "LHC 101",
+        "rooms": [
+          "LHC 101"
+        ],
+        "course_code": "MT2133",
+        "course_name": "Introduction to Proofs (E)",
+        "slot": "I",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "15:00-15:55",
+        "room_number": "LHC 101",
+        "rooms": [
+          "LHC 101"
+        ],
+        "course_code": "PH2123",
+        "course_name": "Mathematical Methods for Physics (Elective)",
+        "slot": "H",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 101",
+        "rooms": [
+          "LHC 101"
+        ],
+        "course_code": "EC2123",
+        "course_name": "Landscapes and Their Evolution (Elective)",
+        "slot": "A",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "10:00-10:55",
+        "room_number": "NLH",
+        "rooms": [
+          "NLH"
+        ],
+        "course_code": "TD2213",
+        "course_name": "Thermodynamics",
+        "slot": "D",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "11:00-11:55",
+        "room_number": "NLH",
+        "rooms": [
+          "NLH"
+        ],
+        "course_code": "PH2113",
+        "course_name": "Introductory Quantum Physics",
+        "slot": "E",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "12:00-12:55",
+        "room_number": "NLH, LHC 105, LHC 106, LHC 107, LHC 108, LHC 306",
+        "rooms": [
+          "NLH",
+          "LHC 105",
+          "LHC 106",
+          "LHC 107",
+          "LHC 108",
+          "LHC 306"
+        ],
+        "course_code": "CH2113",
+        "course_name": "Principles of Inorganic Chemistry (Tutorial 6 batches)",
+        "slot": "F",
+        "kind": "tutorial"
+      },
+      {
+        "day": "Tuesday",
+        "time": "14:00-14:55",
+        "room_number": "LHC 103",
+        "rooms": [
+          "LHC 103"
+        ],
+        "course_code": "BI2113",
+        "course_name": "Ecology and Evolution",
+        "slot": "J",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "15:00-15:55",
+        "room_number": "LHC 101",
+        "rooms": [
+          "LHC 101"
+        ],
+        "course_code": "PH2123",
+        "course_name": "Mathematical Methods for Physics (Elective)",
+        "slot": "H",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "17:00-17:55",
+        "room_number": null,
+        "rooms": [],
+        "course_code": null,
+        "course_name": "Colloquium",
+        "slot": "Colloquium",
+        "kind": "event",
+        "notes": [
+          "Only the \"Colloquium\" slot label is printed (no course code or room)"
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 101",
+        "rooms": [
+          "LHC 101"
+        ],
+        "course_code": "BI2123",
+        "course_name": "Introduction to Biological Systems (Elective)",
+        "slot": "B",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "10:00-10:55",
+        "room_number": "NLH",
+        "rooms": [
+          "NLH"
+        ],
+        "course_code": "TD2213",
+        "course_name": "Thermodynamics",
+        "slot": "D",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "11:00-11:55",
+        "room_number": "NLH",
+        "rooms": [
+          "NLH"
+        ],
+        "course_code": "EC2113",
+        "course_name": "Introduction to Climate Science",
+        "slot": "C",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "12:00-12:55",
+        "room_number": "NLH",
+        "rooms": [
+          "NLH"
+        ],
+        "course_code": "CH2113",
+        "course_name": "Principles of Inorganic Chemistry",
+        "slot": "F",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "14:00-14:55",
+        "room_number": "NLH",
+        "rooms": [
+          "NLH"
+        ],
+        "course_code": "MT2113",
+        "course_name": "Introduction to Probability",
+        "slot": "G",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "15:00-17:55",
+        "room_number": null,
+        "rooms": [],
+        "course_code": "CH2243",
+        "course_name": "General Chemistry Practicals II (Elective)",
+        "slot": "Lab 1",
+        "kind": "lab",
+        "notes": [
+          "No room printed. The lab cell is merged across the 15:00, 16:00 and 17:00 columns in the PDF (15:00-17:55)"
+        ]
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 101",
+        "rooms": [
+          "LHC 101"
+        ],
+        "course_code": "EC2123",
+        "course_name": "Landscapes and Their Evolution (Elective)",
+        "slot": "A",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:00-10:55",
+        "room_number": "NLH, LHC 105, LHC 106, LHC 107, LHC 108, LHC 303",
+        "rooms": [
+          "NLH",
+          "LHC 105",
+          "LHC 106",
+          "LHC 107",
+          "LHC 108",
+          "LHC 303"
+        ],
+        "course_code": "PH2113",
+        "course_name": "Introductory Quantum Physics (Tutorial 6 batches)",
+        "slot": "E",
+        "kind": "tutorial"
+      },
+      {
+        "day": "Thursday",
+        "time": "11:00-11:55",
+        "room_number": "NLH",
+        "rooms": [
+          "NLH"
+        ],
+        "course_code": "EC2113",
+        "course_name": "Introduction to Climate Science",
+        "slot": "C",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "12:00-12:55",
+        "room_number": "NLH",
+        "rooms": [
+          "NLH"
+        ],
+        "course_code": "MT2113",
+        "course_name": "Introduction to Probability",
+        "slot": "G",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "14:00-14:55",
+        "room_number": "LHC 101",
+        "rooms": [
+          "LHC 101"
+        ],
+        "course_code": "MT2133",
+        "course_name": "Introduction to Proofs (E)",
+        "slot": "I",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "15:00-17:55",
+        "room_number": null,
+        "rooms": [],
+        "course_code": "CH2243",
+        "course_name": "General Chemistry Practicals II (Elective)",
+        "slot": "Lab 2",
+        "kind": "lab",
+        "notes": [
+          "No room printed. The lab cell is merged across the 15:00, 16:00 and 17:00 columns in the PDF (15:00-17:55)"
+        ]
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 101",
+        "rooms": [
+          "LHC 101"
+        ],
+        "course_code": "BI2123",
+        "course_name": "Introduction to Biological Systems (Elective)",
+        "slot": "B",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 105, LHC 106, LHC 107, LHC 108, LHC 205",
+        "rooms": [
+          "LHC 105",
+          "LHC 106",
+          "LHC 107",
+          "LHC 108",
+          "LHC 205"
+        ],
+        "course_code": "EC2113",
+        "course_name": "Introduction to Climate Science (Tutorial 6 batches)",
+        "slot": "C",
+        "kind": "tutorial"
+      },
+      {
+        "day": "Friday",
+        "time": "11:00-11:55",
+        "room_number": "NLH, LHC 101, LHC 103, LHC 105, LHC 106, LHC 107, LHC 108, LHC 205",
+        "rooms": [
+          "NLH",
+          "LHC 101",
+          "LHC 103",
+          "LHC 105",
+          "LHC 106",
+          "LHC 107",
+          "LHC 108",
+          "LHC 205"
+        ],
+        "course_code": "TD2213",
+        "course_name": "Thermodynamics (Tutorial 6 batches)",
+        "slot": "D",
+        "kind": "tutorial"
+      },
+      {
+        "day": "Friday",
+        "time": "12:00-12:55",
+        "room_number": "NLH, LHC 105, LHC 106, LHC 107, LHC 108, LHC 304",
+        "rooms": [
+          "NLH",
+          "LHC 105",
+          "LHC 106",
+          "LHC 107",
+          "LHC 108",
+          "LHC 304"
+        ],
+        "course_code": "MT2113",
+        "course_name": "Introduction to Probability (Tutorial 6 batches)",
+        "slot": "G",
+        "kind": "tutorial"
+      },
+      {
+        "day": "Friday",
+        "time": "14:00-14:55",
+        "room_number": "LHC 101, LHC 103, LHC 206",
+        "rooms": [
+          "LHC 101",
+          "LHC 103",
+          "LHC 206"
+        ],
+        "course_code": "MT2133",
+        "course_name": "Introduction to Proofs (E) (Tutorial 3 batches)",
+        "slot": "I",
+        "kind": "tutorial"
+      },
+      {
+        "day": "Friday",
+        "time": "15:00-15:55",
+        "room_number": "LHC 101",
+        "rooms": [
+          "LHC 101"
+        ],
+        "course_code": "PH2123",
+        "course_name": "Mathematical Methods for Physics (Elective)",
+        "slot": "H",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "16:00-17:55",
+        "room_number": "LHC 103",
+        "rooms": [
+          "LHC 103"
+        ],
+        "course_code": "BI2113",
+        "course_name": "Ecology and Evolution (J group course but runs for 2 hours)",
+        "slot": "J",
+        "kind": "lecture",
+        "notes": [
+          "Printed as two cells (16:00 and 17:00 columns, both LHC 103); the PDF says this J-group course runs for 2 hours, so they are one session"
+        ]
+      }
+    ],
+    "Year III & IV": [
+      {
+        "day": "Monday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 306",
+        "rooms": [
+          "LHC 306"
+        ],
+        "course_code": "BI3164",
+        "course_name": "Plant Biology - I",
+        "slot": "A",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 201",
+        "rooms": [
+          "LHC 201"
+        ],
+        "course_code": "BI3194",
+        "course_name": "Developmental Biology",
+        "slot": "A",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 305",
+        "rooms": [
+          "LHC 305"
+        ],
+        "course_code": "CH4124",
+        "course_name": "Bioinorganic Chemistry",
+        "slot": "A",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 304",
+        "rooms": [
+          "LHC 304"
+        ],
+        "course_code": "DS4244",
+        "course_name": "Bayesian Theory and Practice",
+        "slot": "A",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 301",
+        "rooms": [
+          "LHC 301"
+        ],
+        "course_code": "MT3334",
+        "course_name": "Advanced Linear Algebra",
+        "slot": "A",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 205",
+        "rooms": [
+          "LHC 205"
+        ],
+        "course_code": "MT4114",
+        "course_name": "Algebraic Topology",
+        "slot": "A",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 206",
+        "rooms": [
+          "LHC 206"
+        ],
+        "course_code": "MT6144",
+        "course_name": "Analysis - I",
+        "slot": "A",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 103",
+        "rooms": [
+          "LHC 103"
+        ],
+        "course_code": "PH3114",
+        "course_name": "Electrodynamics-I",
+        "slot": "A",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 303",
+        "rooms": [
+          "LHC 303"
+        ],
+        "course_code": "PH4273",
+        "course_name": "Non-linear Dynamics",
+        "slot": "A",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 201",
+        "rooms": [
+          "LHC 201"
+        ],
+        "course_code": "BI3144",
+        "course_name": "Cellular Biophysics I",
+        "slot": "B",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 203",
+        "rooms": [
+          "LHC 203"
+        ],
+        "course_code": "CH4134",
+        "course_name": "Polymer Chemistry",
+        "slot": "B",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 205",
+        "rooms": [
+          "LHC 205"
+        ],
+        "course_code": "EC3154",
+        "course_name": "Sedimentology and Stratigraphy",
+        "slot": "B",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 206",
+        "rooms": [
+          "LHC 206"
+        ],
+        "course_code": "MT3144",
+        "course_name": "Ordinary Differential Equations",
+        "slot": "B",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 303",
+        "rooms": [
+          "LHC 303"
+        ],
+        "course_code": "MT3174",
+        "course_name": "Fields and Galois theory",
+        "slot": "B",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 201",
+        "rooms": [
+          "LHC 201"
+        ],
+        "course_code": "BI3234",
+        "course_name": "Animal Behaviour",
+        "slot": "E",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 203",
+        "rooms": [
+          "LHC 203"
+        ],
+        "course_code": "CH3154",
+        "course_name": "Chemical Equilibrium and Kinetics",
+        "slot": "E",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 205",
+        "rooms": [
+          "LHC 205"
+        ],
+        "course_code": "EC3174",
+        "course_name": "Structural Geology and Tectonics",
+        "slot": "E",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 305",
+        "rooms": [
+          "LHC 305"
+        ],
+        "course_code": "EC4184",
+        "course_name": "Subsurface Imaging Methods",
+        "slot": "E",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 304",
+        "rooms": [
+          "LHC 304"
+        ],
+        "course_code": "MT3124",
+        "course_name": "Real Analysis II",
+        "slot": "E",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 301",
+        "rooms": [
+          "LHC 301"
+        ],
+        "course_code": "MT4134",
+        "course_name": "Probability",
+        "slot": "E",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "12:00-12:55",
+        "room_number": "LHC 205",
+        "rooms": [
+          "LHC 205"
+        ],
+        "course_code": "BI4133",
+        "course_name": "Epigenetics",
+        "slot": "F",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "12:00-12:55",
+        "room_number": "LHC 203",
+        "rooms": [
+          "LHC 203"
+        ],
+        "course_code": "CH3114",
+        "course_name": "Physical Organic Chemistry",
+        "slot": "F",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "12:00-12:55",
+        "room_number": "LHC 305",
+        "rooms": [
+          "LHC 305"
+        ],
+        "course_code": "CH4144",
+        "course_name": "Statistical Thermodynamics",
+        "slot": "F",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "12:00-12:55",
+        "room_number": "LHC 303",
+        "rooms": [
+          "LHC 303"
+        ],
+        "course_code": "EC3194/BI3354",
+        "course_name": "Paleobiology",
+        "slot": "F",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "12:00-12:55",
+        "room_number": "LHC 301",
+        "rooms": [
+          "LHC 301"
+        ],
+        "course_code": "MT3194",
+        "course_name": "Statistical Inference",
+        "slot": "F",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "12:00-12:55",
+        "room_number": "LHC 304",
+        "rooms": [
+          "LHC 304"
+        ],
+        "course_code": "PH5253",
+        "course_name": "Quantum devices and Fabrication",
+        "slot": "F",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "12:00-13:30",
+        "room_number": "LHC 206",
+        "rooms": [
+          "LHC 206"
+        ],
+        "course_code": "HS3364",
+        "course_name": "City and Cinema (12-1:30)",
+        "slot": "F",
+        "kind": "lecture",
+        "notes": [
+          "Printed in the 12:00 column; the name states 12-1:30, so the class runs 12:00-13:30"
+        ]
+      },
+      {
+        "day": "Monday",
+        "time": "14:00-14:55",
+        "room_number": "LHC 201",
+        "rooms": [
+          "LHC 201"
+        ],
+        "course_code": "BI3154",
+        "course_name": "Neurobiology - I",
+        "slot": "I",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "14:00-14:55",
+        "room_number": "LHC 306",
+        "rooms": [
+          "LHC 306"
+        ],
+        "course_code": "CH4114",
+        "course_name": "Organic Synthesis - II",
+        "slot": "I",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "14:00-14:55",
+        "room_number": "LHC 305",
+        "rooms": [
+          "LHC 305"
+        ],
+        "course_code": "DS3143/EC3183",
+        "course_name": "Parameter Estimation and Inverse Theory",
+        "slot": "I",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "14:00-14:55",
+        "room_number": "LHC 304",
+        "rooms": [
+          "LHC 304"
+        ],
+        "course_code": "MT3134",
+        "course_name": "Point Set Topology",
+        "slot": "I",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "14:00-14:55",
+        "room_number": "LHC 203",
+        "rooms": [
+          "LHC 203"
+        ],
+        "course_code": "PH4154",
+        "course_name": "Nuclear and Particle Physics",
+        "slot": "I",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "14:00-14:55",
+        "room_number": "LHC 301",
+        "rooms": [
+          "LHC 301"
+        ],
+        "course_code": "PH5263",
+        "course_name": "Quantum Communications and Cryptography",
+        "slot": "I",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "15:00-15:55",
+        "room_number": "LHC 303",
+        "rooms": [
+          "LHC 303"
+        ],
+        "course_code": "BI3184",
+        "course_name": "Ecology - I",
+        "slot": "H",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "15:00-15:55",
+        "room_number": "LHC 205",
+        "rooms": [
+          "LHC 205"
+        ],
+        "course_code": "CH4194",
+        "course_name": "Fundamentals of Solution-State NMR Spectroscopy: Principles and Applications (NKN)",
+        "slot": "H",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "15:00-15:55",
+        "room_number": "Computer Lab, 4th Floor of the Main Building",
+        "rooms": [
+          "Computer Lab, 4th Floor of the Main Building"
+        ],
+        "course_code": "DS4144",
+        "course_name": "Deep Learning",
+        "slot": "H",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "15:00-15:55",
+        "room_number": "LHC 206",
+        "rooms": [
+          "LHC 206"
+        ],
+        "course_code": "EC4114",
+        "course_name": "Atmosphere and Ocean Dynamics",
+        "slot": "H",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "15:00-15:55",
+        "room_number": "LHC 304",
+        "rooms": [
+          "LHC 304"
+        ],
+        "course_code": "MT3184",
+        "course_name": "Differential geometry and Lie groups",
+        "slot": "H",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "15:00-15:55",
+        "room_number": "LHC 301",
+        "rooms": [
+          "LHC 301"
+        ],
+        "course_code": "PH3164",
+        "course_name": "Mathematical Methods for Physics II",
+        "slot": "H",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "16:00-16:55",
+        "room_number": "LHC 203",
+        "rooms": [
+          "LHC 203"
+        ],
+        "course_code": "CH3134",
+        "course_name": "Symmetry and Group Theory",
+        "slot": "K",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "16:00-16:55",
+        "room_number": "LHC 205",
+        "rooms": [
+          "LHC 205"
+        ],
+        "course_code": "EC3164",
+        "course_name": "Earth and Planetary Materials",
+        "slot": "K",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "16:00-16:55",
+        "room_number": "LHC 305",
+        "rooms": [
+          "LHC 305"
+        ],
+        "course_code": "EC4144",
+        "course_name": "Tropical Meteorology",
+        "slot": "K",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "16:00-16:55",
+        "room_number": "LHC 303",
+        "rooms": [
+          "LHC 303"
+        ],
+        "course_code": "MT3114",
+        "course_name": "Rings and Modules",
+        "slot": "K",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "16:00-16:55",
+        "room_number": "LHC 206",
+        "rooms": [
+          "LHC 206"
+        ],
+        "course_code": "SE4233",
+        "course_name": "Philosophy of Science",
+        "slot": "K",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "16:00-18:00",
+        "room_number": "G1",
+        "rooms": [
+          "G1"
+        ],
+        "course_code": "EC4164",
+        "course_name": "Igneous and Metamorphic Petrology (4-6pm)",
+        "slot": "K",
+        "kind": "lecture",
+        "notes": [
+          "Printed in the 16:00 column; the name states 4-6pm, so the class runs 16:00-18:00",
+          "Room \"G1\" is printed in a merged cell right of the course name (spanning the 16:00 room column and the 17:00 column)"
+        ]
+      },
+      {
+        "day": "Monday",
+        "time": "17:00-17:55",
+        "room_number": "Computer Lab, 4th Floor of the Main Building",
+        "rooms": [
+          "Computer Lab, 4th Floor of the Main Building"
+        ],
+        "course_code": "BI3134/DS3114",
+        "course_name": "Bioinformatics",
+        "slot": "J",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "17:00-17:55",
+        "room_number": "LHC 203",
+        "rooms": [
+          "LHC 203"
+        ],
+        "course_code": "CH3124",
+        "course_name": "Main Group Chemistry",
+        "slot": "J",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "17:00-17:55",
+        "room_number": "LHC 301",
+        "rooms": [
+          "LHC 301"
+        ],
+        "course_code": "MT4124",
+        "course_name": "Functional Analysis",
+        "slot": "J",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "17:00-17:55",
+        "room_number": "LHC 206",
+        "rooms": [
+          "LHC 206"
+        ],
+        "course_code": "MT6154",
+        "course_name": "Topology - I",
+        "slot": "J",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "17:00-17:55",
+        "room_number": "LHC 101",
+        "rooms": [
+          "LHC 101"
+        ],
+        "course_code": "PH3144",
+        "course_name": "Electronics-I with lab",
+        "slot": "J",
+        "kind": "lecture"
+      },
+      {
+        "day": "Monday",
+        "time": "17:00-19:00",
+        "room_number": "LHC 205",
+        "rooms": [
+          "LHC 205"
+        ],
+        "course_code": "HS3213",
+        "course_name": "Introduction to Paninian Grammar (5-7pm)",
+        "slot": "J",
+        "kind": "lecture",
+        "notes": [
+          "Printed in the 17:00 column; the name states 5-7pm, so the class runs 17:00-19:00"
+        ]
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 306",
+        "rooms": [
+          "LHC 306"
+        ],
+        "course_code": "BI3164",
+        "course_name": "Plant Biology - I",
+        "slot": "A",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 201",
+        "rooms": [
+          "LHC 201"
+        ],
+        "course_code": "BI3194",
+        "course_name": "Developmental Biology",
+        "slot": "A",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 305",
+        "rooms": [
+          "LHC 305"
+        ],
+        "course_code": "CH4124",
+        "course_name": "Bioinorganic Chemistry",
+        "slot": "A",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 304",
+        "rooms": [
+          "LHC 304"
+        ],
+        "course_code": "DS4244",
+        "course_name": "Bayesian Theory and Practice",
+        "slot": "A",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 301",
+        "rooms": [
+          "LHC 301"
+        ],
+        "course_code": "MT3334",
+        "course_name": "Advanced Linear Algebra",
+        "slot": "A",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 205",
+        "rooms": [
+          "LHC 205"
+        ],
+        "course_code": "MT4114",
+        "course_name": "Algebraic Topology",
+        "slot": "A",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 206",
+        "rooms": [
+          "LHC 206"
+        ],
+        "course_code": "MT6144",
+        "course_name": "Analysis-I",
+        "slot": "A",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 103",
+        "rooms": [
+          "LHC 103"
+        ],
+        "course_code": "PH3114",
+        "course_name": "Electrodynamics-I",
+        "slot": "A",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 303",
+        "rooms": [
+          "LHC 303"
+        ],
+        "course_code": "PH4273",
+        "course_name": "Non-linear Dynamics",
+        "slot": "A",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 201",
+        "rooms": [
+          "LHC 201"
+        ],
+        "course_code": "BI3174",
+        "course_name": "Advanced Biochemistry - I",
+        "slot": "D",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 203",
+        "rooms": [
+          "LHC 203"
+        ],
+        "course_code": "CH4164",
+        "course_name": "Bioorganic Chemistry and Chemical Biology",
+        "slot": "D",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 206",
+        "rooms": [
+          "LHC 206"
+        ],
+        "course_code": "EC3124",
+        "course_name": "Physics of the Atmosphere",
+        "slot": "D",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 304",
+        "rooms": [
+          "LHC 304"
+        ],
+        "course_code": "HS3533",
+        "course_name": "State, Nation and Citizenship",
+        "slot": "D",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 306",
+        "rooms": [
+          "LHC 306"
+        ],
+        "course_code": "MT3154",
+        "course_name": "Graph Theory",
+        "slot": "D",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 301",
+        "rooms": [
+          "LHC 301"
+        ],
+        "course_code": "PH3124",
+        "course_name": "Quantum Mechanics-I",
+        "slot": "D",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 303",
+        "rooms": [
+          "LHC 303"
+        ],
+        "course_code": "PH4133",
+        "course_name": "Quantum Field Theory-I",
+        "slot": "D",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 305",
+        "rooms": [
+          "LHC 305"
+        ],
+        "course_code": "PH5244",
+        "course_name": "Quantum Metrology and Sensing",
+        "slot": "D",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 201",
+        "rooms": [
+          "LHC 201"
+        ],
+        "course_code": "BI3234",
+        "course_name": "Animal Behaviour",
+        "slot": "E",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 203",
+        "rooms": [
+          "LHC 203"
+        ],
+        "course_code": "CH3154",
+        "course_name": "Chemical Equilibrium and Kinetics",
+        "slot": "E",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 205",
+        "rooms": [
+          "LHC 205"
+        ],
+        "course_code": "EC3174",
+        "course_name": "Structural Geology and Tectonics",
+        "slot": "E",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 305",
+        "rooms": [
+          "LHC 305"
+        ],
+        "course_code": "EC4184",
+        "course_name": "Subsurface Imaging Methods",
+        "slot": "E",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 304",
+        "rooms": [
+          "LHC 304"
+        ],
+        "course_code": "MT3124",
+        "course_name": "Real Analysis II",
+        "slot": "E",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 301",
+        "rooms": [
+          "LHC 301"
+        ],
+        "course_code": "MT4134",
+        "course_name": "Probability",
+        "slot": "E",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 306",
+        "rooms": [
+          "LHC 306"
+        ],
+        "course_code": "PH3153",
+        "course_name": "Methods of Experimental Physics",
+        "slot": "E",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "11:00-11:55",
+        "room_number": "Main Building 21",
+        "rooms": [
+          "Main Building 21"
+        ],
+        "course_code": "PH5223",
+        "course_name": "Quantum Industry",
+        "slot": "E",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 206",
+        "rooms": [
+          "LHC 206"
+        ],
+        "course_code": "SE3143",
+        "course_name": "Knowledge, Knowing and Learning",
+        "slot": "E",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "12:00-12:55",
+        "room_number": "LHC 205",
+        "rooms": [
+          "LHC 205"
+        ],
+        "course_code": "BI4133",
+        "course_name": "Epigenetics",
+        "slot": "F",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "12:00-12:55",
+        "room_number": "LHC 203",
+        "rooms": [
+          "LHC 203"
+        ],
+        "course_code": "CH3114",
+        "course_name": "Physical Organic Chemistry",
+        "slot": "F",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "12:00-12:55",
+        "room_number": "LHC 305",
+        "rooms": [
+          "LHC 305"
+        ],
+        "course_code": "CH4144",
+        "course_name": "Statistical Thermodynamics",
+        "slot": "F",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "12:00-12:55",
+        "room_number": "LHC 303",
+        "rooms": [
+          "LHC 303"
+        ],
+        "course_code": "EC3194/BI3354",
+        "course_name": "Paleobiology",
+        "slot": "F",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "12:00-12:55",
+        "room_number": "LHC 301",
+        "rooms": [
+          "LHC 301"
+        ],
+        "course_code": "MT3194",
+        "course_name": "Statistical Inference",
+        "slot": "F",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "12:00-13:30",
+        "room_number": "LHC 206",
+        "rooms": [
+          "LHC 206"
+        ],
+        "course_code": "HS3364",
+        "course_name": "City and Cinema (12-1:30)",
+        "slot": "F",
+        "kind": "lecture",
+        "notes": [
+          "Printed in the 12:00 column; the name states 12-1:30, so the class runs 12:00-13:30"
+        ]
+      },
+      {
+        "day": "Tuesday",
+        "time": "14:00-14:55",
+        "room_number": "Computer Lab, 4th Floor of the Main Building",
+        "rooms": [
+          "Computer Lab, 4th Floor of the Main Building"
+        ],
+        "course_code": "BI3134/DS3114",
+        "course_name": "Bioinformatics",
+        "slot": "J",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "14:00-14:55",
+        "room_number": "LHC 203",
+        "rooms": [
+          "LHC 203"
+        ],
+        "course_code": "CH3124",
+        "course_name": "Main Group Chemistry",
+        "slot": "J",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "14:00-14:55",
+        "room_number": "LHC 301",
+        "rooms": [
+          "LHC 301"
+        ],
+        "course_code": "MT4124",
+        "course_name": "Functional Analysis",
+        "slot": "J",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "14:00-14:55",
+        "room_number": "LHC 206",
+        "rooms": [
+          "LHC 206"
+        ],
+        "course_code": "MT6154",
+        "course_name": "Topology - I",
+        "slot": "J",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "14:00-14:55",
+        "room_number": "LHC 101",
+        "rooms": [
+          "LHC 101"
+        ],
+        "course_code": "PH3144",
+        "course_name": "Electronics-I with lab",
+        "slot": "J",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "15:00-15:55",
+        "room_number": "LHC 303",
+        "rooms": [
+          "LHC 303"
+        ],
+        "course_code": "BI3184",
+        "course_name": "Ecology - I",
+        "slot": "H",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "15:00-15:55",
+        "room_number": "LHC 205",
+        "rooms": [
+          "LHC 205"
+        ],
+        "course_code": "CH4194",
+        "course_name": "Fundamentals of Solution-State NMR Spectroscopy: Principles and Applications (NKN)",
+        "slot": "H",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "15:00-15:55",
+        "room_number": "Computer Lab, 4th Floor of the Main Building",
+        "rooms": [
+          "Computer Lab, 4th Floor of the Main Building"
+        ],
+        "course_code": "DS4144",
+        "course_name": "Deep Learning",
+        "slot": "H",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "15:00-15:55",
+        "room_number": "LHC 206",
+        "rooms": [
+          "LHC 206"
+        ],
+        "course_code": "EC4114",
+        "course_name": "Atmosphere and Ocean Dynamics",
+        "slot": "H",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "15:00-15:55",
+        "room_number": "LHC 201",
+        "rooms": [
+          "LHC 201"
+        ],
+        "course_code": "HS3523",
+        "course_name": "Environmental change and development",
+        "slot": "H",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "15:00-15:55",
+        "room_number": "LHC 304",
+        "rooms": [
+          "LHC 304"
+        ],
+        "course_code": "MT3184",
+        "course_name": "Differential geometry and Lie groups",
+        "slot": "H",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "15:00-15:55",
+        "room_number": "LHC 301",
+        "rooms": [
+          "LHC 301"
+        ],
+        "course_code": "PH3164",
+        "course_name": "Mathematical Methods for Physics II",
+        "slot": "H",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "16:00-16:55",
+        "room_number": "LHC 201",
+        "rooms": [
+          "LHC 201"
+        ],
+        "course_code": "BI3323",
+        "course_name": "Structural Biology",
+        "slot": "K",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "16:00-16:55",
+        "room_number": "LHC 203",
+        "rooms": [
+          "LHC 203"
+        ],
+        "course_code": "CH3134",
+        "course_name": "Symmetry and Group Theory",
+        "slot": "K",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "16:00-16:55",
+        "room_number": "LHC 305",
+        "rooms": [
+          "LHC 305"
+        ],
+        "course_code": "EC4144",
+        "course_name": "Tropical Meteorology",
+        "slot": "K",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "16:00-16:55",
+        "room_number": "LHC 306",
+        "rooms": [
+          "LHC 306"
+        ],
+        "course_code": "EC4164",
+        "course_name": "Igneous and Metamorphic Petrology",
+        "slot": "K",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "16:00-16:55",
+        "room_number": "LHC 303",
+        "rooms": [
+          "LHC 303"
+        ],
+        "course_code": "MT3114",
+        "course_name": "Rings and Modules",
+        "slot": "K",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "16:00-16:55",
+        "room_number": "LHC 301",
+        "rooms": [
+          "LHC 301"
+        ],
+        "course_code": "PH4183",
+        "course_name": "Gravitation",
+        "slot": "K",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "16:00-16:55",
+        "room_number": "LHC 206",
+        "rooms": [
+          "LHC 206"
+        ],
+        "course_code": "SE4233",
+        "course_name": "Philosophy of Science",
+        "slot": "K",
+        "kind": "lecture"
+      },
+      {
+        "day": "Tuesday",
+        "time": "16:00-18:00",
+        "room_number": null,
+        "rooms": [],
+        "course_code": "EC3164",
+        "course_name": "Earth and Planetary Materials (4-6pm)",
+        "slot": "K",
+        "kind": "lecture",
+        "notes": [
+          "Printed in the 16:00 column; the name states 4-6pm, so the class runs 16:00-18:00. No room printed"
+        ]
+      },
+      {
+        "day": "Tuesday",
+        "time": "17:00-17:55",
+        "room_number": null,
+        "rooms": [],
+        "course_code": null,
+        "course_name": "Colloquium",
+        "slot": "Colloquium",
+        "kind": "event",
+        "notes": [
+          "Cell has no course code or room printed"
+        ]
+      },
+      {
+        "day": "Tuesday",
+        "time": "17:00-18:55",
+        "room_number": "LHC 203",
+        "rooms": [
+          "LHC 203"
+        ],
+        "course_code": "TD3113",
+        "course_name": "Science and Technology Entrepreneurship",
+        "slot": null,
+        "kind": "lecture",
+        "notes": [
+          "Course cell is in the Tuesday 17:00 (Colloquium) column; its room cell \"LHC203\" is merged across the 17:00 room column and the 18:00 column, so the end time (18:55) is inferred from that merge"
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 201",
+        "rooms": [
+          "LHC 201"
+        ],
+        "course_code": "BI3144",
+        "course_name": "Cellular Biophysics I",
+        "slot": "B",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 203",
+        "rooms": [
+          "LHC 203"
+        ],
+        "course_code": "CH4134",
+        "course_name": "Polymer Chemistry",
+        "slot": "B",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 205",
+        "rooms": [
+          "LHC 205"
+        ],
+        "course_code": "EC3154",
+        "course_name": "Sedimentology and Stratigraphy",
+        "slot": "B",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 206",
+        "rooms": [
+          "LHC 206"
+        ],
+        "course_code": "MT3144",
+        "course_name": "Ordinary Differential Equations",
+        "slot": "B",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 303",
+        "rooms": [
+          "LHC 303"
+        ],
+        "course_code": "MT3174",
+        "course_name": "Fields and Galois theory",
+        "slot": "B",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 301",
+        "rooms": [
+          "LHC 301"
+        ],
+        "course_code": "PH4163",
+        "course_name": "Astronomy and Astrophysics - I",
+        "slot": "B",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 304",
+        "rooms": [
+          "LHC 304"
+        ],
+        "course_code": "SE4123",
+        "course_name": "Science and the world",
+        "slot": "B",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 201",
+        "rooms": [
+          "LHC 201"
+        ],
+        "course_code": "BI3174",
+        "course_name": "Advanced Biochemistry - I",
+        "slot": "D",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 203",
+        "rooms": [
+          "LHC 203"
+        ],
+        "course_code": "CH4164",
+        "course_name": "Bioorganic Chemistry and Chemical Biology",
+        "slot": "D",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 206",
+        "rooms": [
+          "LHC 206"
+        ],
+        "course_code": "EC3124",
+        "course_name": "Physics of the Atmosphere",
+        "slot": "D",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 304",
+        "rooms": [
+          "LHC 304"
+        ],
+        "course_code": "HS3533",
+        "course_name": "State, Nation and Citizenship",
+        "slot": "D",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 306",
+        "rooms": [
+          "LHC 306"
+        ],
+        "course_code": "MT3154",
+        "course_name": "Graph Theory",
+        "slot": "D",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 301",
+        "rooms": [
+          "LHC 301"
+        ],
+        "course_code": "PH3124",
+        "course_name": "Quantum Mechanics-I",
+        "slot": "D",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 305",
+        "rooms": [
+          "LHC 305"
+        ],
+        "course_code": "PH5244",
+        "course_name": "Quantum Metrology and Sensing",
+        "slot": "D",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 201",
+        "rooms": [
+          "LHC 201"
+        ],
+        "course_code": "BI3124",
+        "course_name": "Advanced Molecular Biology",
+        "slot": "C",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 205",
+        "rooms": [
+          "LHC 205"
+        ],
+        "course_code": "BI5114",
+        "course_name": "Biostatistics",
+        "slot": "C",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 203",
+        "rooms": [
+          "LHC 203"
+        ],
+        "course_code": "CH3143",
+        "course_name": "Self-Assembly in Chemistry",
+        "slot": "C",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 206",
+        "rooms": [
+          "LHC 206"
+        ],
+        "course_code": "CH4173",
+        "course_name": "Solid State Chemistry",
+        "slot": "C",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 306",
+        "rooms": [
+          "LHC 306"
+        ],
+        "course_code": "DS4233",
+        "course_name": "Time Series Analysis",
+        "slot": "C",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 305",
+        "rooms": [
+          "LHC 305"
+        ],
+        "course_code": "EC4153",
+        "course_name": "Sequence Stratigraphy",
+        "slot": "C",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 304",
+        "rooms": [
+          "LHC 304"
+        ],
+        "course_code": "MT4144",
+        "course_name": "Representation theory of Finite Groups",
+        "slot": "C",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 301",
+        "rooms": [
+          "LHC 301"
+        ],
+        "course_code": "PH3234",
+        "course_name": "Statistical Mechanics I",
+        "slot": "C",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 303",
+        "rooms": [
+          "LHC 303"
+        ],
+        "course_code": "PH4113",
+        "course_name": "Condensed Matter Physics-II",
+        "slot": "C",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "12:00-12:55",
+        "room_number": "LHC 203",
+        "rooms": [
+          "LHC 203"
+        ],
+        "course_code": "CH3114",
+        "course_name": "Physical Organic Chemistry",
+        "slot": "F",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "12:00-12:55",
+        "room_number": "LHC 305",
+        "rooms": [
+          "LHC 305"
+        ],
+        "course_code": "CH4144",
+        "course_name": "Statistical Thermodynamics",
+        "slot": "F",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "12:00-12:55",
+        "room_number": "LHC 303",
+        "rooms": [
+          "LHC 303"
+        ],
+        "course_code": "EC3194/BI3354",
+        "course_name": "Paleobiology",
+        "slot": "F",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "12:00-12:55",
+        "room_number": "LHC 301",
+        "rooms": [
+          "LHC 301"
+        ],
+        "course_code": "MT3194",
+        "course_name": "Statistical Inference",
+        "slot": "F",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "12:00-12:55",
+        "room_number": "LHC 304",
+        "rooms": [
+          "LHC 304"
+        ],
+        "course_code": "PH5253",
+        "course_name": "Quantum devices and Fabrication",
+        "slot": "F",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "14:00-14:55",
+        "room_number": "LHC 203",
+        "rooms": [
+          "LHC 203"
+        ],
+        "course_code": "BI3344",
+        "course_name": "Microbial Genetics",
+        "slot": "G",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "14:00-14:55",
+        "room_number": "LHC 205",
+        "rooms": [
+          "LHC 205"
+        ],
+        "course_code": "CH4184",
+        "course_name": "Electrochemistry",
+        "slot": "G",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "14:00-14:55",
+        "room_number": "LHC 305",
+        "rooms": [
+          "LHC 305"
+        ],
+        "course_code": "EC3323",
+        "course_name": "Hydrology",
+        "slot": "G",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "14:00-14:55",
+        "room_number": "LHC 306",
+        "rooms": [
+          "LHC 306"
+        ],
+        "course_code": "MT6134",
+        "course_name": "Algebra - I",
+        "slot": "G",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "14:00-14:55",
+        "room_number": "LHC 301",
+        "rooms": [
+          "LHC 301"
+        ],
+        "course_code": "PH3134",
+        "course_name": "Optics",
+        "slot": "G",
+        "kind": "lecture"
+      },
+      {
+        "day": "Wednesday",
+        "time": "14:00-16:55",
+        "room_number": null,
+        "rooms": [],
+        "course_code": "MT5114 & MT5124",
+        "course_name": "Mathematics Lab I & III",
+        "slot": "G",
+        "kind": "lab",
+        "notes": [
+          "Lab cell has no room printed; it extends to the right across several columns",
+          "Time written in the cell; no room printed"
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "time": "15:00-17:55",
+        "room_number": null,
+        "rooms": [],
+        "course_code": "EC4123",
+        "course_name": "Sedimentology & Paleontology Lab",
+        "slot": "Lab 1",
+        "kind": "lab",
+        "notes": [
+          "No room printed. The lab cell is merged across the 15:00, 16:00 and 17:00 columns in the PDF (15:00-17:55)"
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "time": "15:00-17:55",
+        "room_number": null,
+        "rooms": [],
+        "course_code": "PH3173",
+        "course_name": "Physics Lab-III",
+        "slot": "Lab 1",
+        "kind": "lab",
+        "notes": [
+          "No room printed. The lab cell is merged across the 15:00, 16:00 and 17:00 columns in the PDF (15:00-17:55)"
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "time": "15:00-17:55",
+        "room_number": null,
+        "rooms": [],
+        "course_code": "PH4144",
+        "course_name": "Physics Lab-V",
+        "slot": "Lab 1",
+        "kind": "lab",
+        "notes": [
+          "No room printed. The lab cell is merged across the 15:00, 16:00 and 17:00 columns in the PDF (15:00-17:55)"
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "time": "15:00-17:55",
+        "room_number": null,
+        "rooms": [],
+        "course_code": "PH5214",
+        "course_name": "Quantum Lab II",
+        "slot": "Lab 1",
+        "kind": "lab",
+        "notes": [
+          "No room printed. The lab cell is merged across the 15:00, 16:00 and 17:00 columns in the PDF (15:00-17:55)"
+        ]
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 306",
+        "rooms": [
+          "LHC 306"
+        ],
+        "course_code": "BI3164",
+        "course_name": "Plant Biology - I",
+        "slot": "A",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 201",
+        "rooms": [
+          "LHC 201"
+        ],
+        "course_code": "BI3194",
+        "course_name": "Developmental Biology",
+        "slot": "A",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 305",
+        "rooms": [
+          "LHC 305"
+        ],
+        "course_code": "CH4124",
+        "course_name": "Bioinorganic Chemistry",
+        "slot": "A",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 304",
+        "rooms": [
+          "LHC 304"
+        ],
+        "course_code": "DS4244",
+        "course_name": "Bayesian Theory and Practice",
+        "slot": "A",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 301",
+        "rooms": [
+          "LHC 301"
+        ],
+        "course_code": "MT3334",
+        "course_name": "Advanced Linear Algebra",
+        "slot": "A",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 205",
+        "rooms": [
+          "LHC 205"
+        ],
+        "course_code": "MT4114",
+        "course_name": "Algebraic Topology",
+        "slot": "A",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 206",
+        "rooms": [
+          "LHC 206"
+        ],
+        "course_code": "MT6144",
+        "course_name": "Analysis-I",
+        "slot": "A",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 103",
+        "rooms": [
+          "LHC 103"
+        ],
+        "course_code": "PH3114",
+        "course_name": "Electrodynamics-I",
+        "slot": "A",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 201",
+        "rooms": [
+          "LHC 201"
+        ],
+        "course_code": "BI3234",
+        "course_name": "Animal Behaviour",
+        "slot": "E",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 203",
+        "rooms": [
+          "LHC 203"
+        ],
+        "course_code": "CH3154",
+        "course_name": "Chemical Equilibrium and Kinetics",
+        "slot": "E",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 205",
+        "rooms": [
+          "LHC 205"
+        ],
+        "course_code": "EC3174",
+        "course_name": "Structural Geology and Tectonics",
+        "slot": "E",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 305",
+        "rooms": [
+          "LHC 305"
+        ],
+        "course_code": "EC4184",
+        "course_name": "Subsurface Imaging Methods",
+        "slot": "E",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 304",
+        "rooms": [
+          "LHC 304"
+        ],
+        "course_code": "MT3124",
+        "course_name": "Real Analysis II",
+        "slot": "E",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 301",
+        "rooms": [
+          "LHC 301"
+        ],
+        "course_code": "MT4134",
+        "course_name": "Probability",
+        "slot": "E",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 306",
+        "rooms": [
+          "LHC 306"
+        ],
+        "course_code": "PH3153",
+        "course_name": "Methods of Experimental Physics",
+        "slot": "E",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:00-10:55",
+        "room_number": "Main Building 21",
+        "rooms": [
+          "Main Building 21"
+        ],
+        "course_code": "PH5223",
+        "course_name": "Quantum Industry",
+        "slot": "E",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 206",
+        "rooms": [
+          "LHC 206"
+        ],
+        "course_code": "SE3143",
+        "course_name": "Knowledge, Knowing and Learning",
+        "slot": "E",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 201",
+        "rooms": [
+          "LHC 201"
+        ],
+        "course_code": "BI3124",
+        "course_name": "Advanced Molecular Biology",
+        "slot": "C",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 205",
+        "rooms": [
+          "LHC 205"
+        ],
+        "course_code": "BI5114",
+        "course_name": "Biostatistics",
+        "slot": "C",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 203",
+        "rooms": [
+          "LHC 203"
+        ],
+        "course_code": "CH3143",
+        "course_name": "Self-Assembly in Chemistry",
+        "slot": "C",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 206",
+        "rooms": [
+          "LHC 206"
+        ],
+        "course_code": "CH4173",
+        "course_name": "Solid State Chemistry",
+        "slot": "C",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 306",
+        "rooms": [
+          "LHC 306"
+        ],
+        "course_code": "DS4233",
+        "course_name": "Time Series Analysis",
+        "slot": "C",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 305",
+        "rooms": [
+          "LHC 305"
+        ],
+        "course_code": "EC4153",
+        "course_name": "Sequence Stratigraphy",
+        "slot": "C",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 304",
+        "rooms": [
+          "LHC 304"
+        ],
+        "course_code": "MT4144",
+        "course_name": "Representation theory of Finite Groups",
+        "slot": "C",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 301",
+        "rooms": [
+          "LHC 301"
+        ],
+        "course_code": "PH3234",
+        "course_name": "Statistical Mechanics I",
+        "slot": "C",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 303",
+        "rooms": [
+          "LHC 303"
+        ],
+        "course_code": "PH4113",
+        "course_name": "Condensed Matter Physics-II",
+        "slot": "C",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "12:00-12:55",
+        "room_number": "LHC 201",
+        "rooms": [
+          "LHC 201"
+        ],
+        "course_code": "BI3333/HS3173",
+        "course_name": "Disease and Discourse",
+        "slot": "G",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "12:00-12:55",
+        "room_number": "LHC 203",
+        "rooms": [
+          "LHC 203"
+        ],
+        "course_code": "BI3344",
+        "course_name": "Microbial Genetics",
+        "slot": "G",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "12:00-12:55",
+        "room_number": "LHC 205",
+        "rooms": [
+          "LHC 205"
+        ],
+        "course_code": "CH4184",
+        "course_name": "Electrochemistry",
+        "slot": "G",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "12:00-12:55",
+        "room_number": "LHC 303",
+        "rooms": [
+          "LHC 303"
+        ],
+        "course_code": "HS3263",
+        "course_name": "History of Architecture in India",
+        "slot": "G",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "12:00-12:55",
+        "room_number": "LHC 306",
+        "rooms": [
+          "LHC 306"
+        ],
+        "course_code": "MT6134",
+        "course_name": "Algebra - I",
+        "slot": "G",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "12:00-12:55",
+        "room_number": "LHC 301",
+        "rooms": [
+          "LHC 301"
+        ],
+        "course_code": "PH3134",
+        "course_name": "Optics",
+        "slot": "G",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "12:00-12:55",
+        "room_number": "LHC 206",
+        "rooms": [
+          "LHC 206"
+        ],
+        "course_code": "SE4133",
+        "course_name": "Introduction to Learning Sciences",
+        "slot": "G",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "14:00-14:55",
+        "room_number": "LHC 201",
+        "rooms": [
+          "LHC 201"
+        ],
+        "course_code": "BI3154",
+        "course_name": "Neurobiology - I",
+        "slot": "I",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "14:00-14:55",
+        "room_number": "LHC 306",
+        "rooms": [
+          "LHC 306"
+        ],
+        "course_code": "CH4114",
+        "course_name": "Organic Synthesis - II",
+        "slot": "I",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "14:00-14:55",
+        "room_number": "LHC 304",
+        "rooms": [
+          "LHC 304"
+        ],
+        "course_code": "MT3134",
+        "course_name": "Point Set Topology",
+        "slot": "I",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "14:00-14:55",
+        "room_number": "LHC 203",
+        "rooms": [
+          "LHC 203"
+        ],
+        "course_code": "PH4154",
+        "course_name": "Nuclear and Particle Physics",
+        "slot": "I",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "14:00-14:55",
+        "room_number": "LHC 301",
+        "rooms": [
+          "LHC 301"
+        ],
+        "course_code": "PH5263",
+        "course_name": "Quantum Communications and Cryptography",
+        "slot": "I",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "15:00-15:55",
+        "room_number": "LHC 303",
+        "rooms": [
+          "LHC 303"
+        ],
+        "course_code": "BI3184",
+        "course_name": "Ecology - I",
+        "slot": "H",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "15:00-15:55",
+        "room_number": "LHC 205",
+        "rooms": [
+          "LHC 205"
+        ],
+        "course_code": "CH4194",
+        "course_name": "Fundamentals of Solution-State NMR Spectroscopy: Principles and Applications (NKN)",
+        "slot": "H",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "15:00-15:55",
+        "room_number": "Computer Lab, 4th Floor of the Main Building",
+        "rooms": [
+          "Computer Lab, 4th Floor of the Main Building"
+        ],
+        "course_code": "DS4144",
+        "course_name": "Deep Learning",
+        "slot": "H",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "15:00-15:55",
+        "room_number": "LHC 206",
+        "rooms": [
+          "LHC 206"
+        ],
+        "course_code": "EC4114",
+        "course_name": "Atmosphere and Ocean Dynamics",
+        "slot": "H",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "15:00-15:55",
+        "room_number": "LHC 201",
+        "rooms": [
+          "LHC 201"
+        ],
+        "course_code": "HS3523",
+        "course_name": "Environmental change and development",
+        "slot": "H",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "15:00-15:55",
+        "room_number": "LHC 304",
+        "rooms": [
+          "LHC 304"
+        ],
+        "course_code": "MT3184",
+        "course_name": "Differential geometry and Lie groups",
+        "slot": "H",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "15:00-15:55",
+        "room_number": "LHC 301",
+        "rooms": [
+          "LHC 301"
+        ],
+        "course_code": "PH3164",
+        "course_name": "Mathematical Methods for Physics II",
+        "slot": "H",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "16:00-16:55",
+        "room_number": "LHC 201",
+        "rooms": [
+          "LHC 201"
+        ],
+        "course_code": "BI3323",
+        "course_name": "Structural Biology",
+        "slot": "K",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "16:00-16:55",
+        "room_number": "LHC 203",
+        "rooms": [
+          "LHC 203"
+        ],
+        "course_code": "CH3134",
+        "course_name": "Symmetry and Group Theory",
+        "slot": "K",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "16:00-16:55",
+        "room_number": "LHC 305",
+        "rooms": [
+          "LHC 305"
+        ],
+        "course_code": "EC4144",
+        "course_name": "Tropical Meteorology",
+        "slot": "K",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "16:00-16:55",
+        "room_number": "LHC 303",
+        "rooms": [
+          "LHC 303"
+        ],
+        "course_code": "MT3114",
+        "course_name": "Rings and Modules",
+        "slot": "K",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "16:00-16:55",
+        "room_number": "LHC 301",
+        "rooms": [
+          "LHC 301"
+        ],
+        "course_code": "PH4183",
+        "course_name": "Gravitation",
+        "slot": "K",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "17:00-17:55",
+        "room_number": "Computer Lab, 4th Floor of the Main Building",
+        "rooms": [
+          "Computer Lab, 4th Floor of the Main Building"
+        ],
+        "course_code": "BI3134/DS3114",
+        "course_name": "Bioinformatics",
+        "slot": "J",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "17:00-17:55",
+        "room_number": "LHC 203",
+        "rooms": [
+          "LHC 203"
+        ],
+        "course_code": "CH3124",
+        "course_name": "Main Group Chemistry",
+        "slot": "J",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "17:00-17:55",
+        "room_number": "LHC 301",
+        "rooms": [
+          "LHC 301"
+        ],
+        "course_code": "MT4124",
+        "course_name": "Functional Analysis",
+        "slot": "J",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "17:00-17:55",
+        "room_number": "LHC 206",
+        "rooms": [
+          "LHC 206"
+        ],
+        "course_code": "MT6154",
+        "course_name": "Topology - I",
+        "slot": "J",
+        "kind": "lecture"
+      },
+      {
+        "day": "Thursday",
+        "time": "17:00-17:55",
+        "room_number": "LHC 101",
+        "rooms": [
+          "LHC 101"
+        ],
+        "course_code": "PH3144",
+        "course_name": "Electronics-I with lab",
+        "slot": "J",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 201",
+        "rooms": [
+          "LHC 201"
+        ],
+        "course_code": "BI3144",
+        "course_name": "Cellular Biophysics I",
+        "slot": "B",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 203",
+        "rooms": [
+          "LHC 203"
+        ],
+        "course_code": "CH4134",
+        "course_name": "Polymer Chemistry",
+        "slot": "B",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 205",
+        "rooms": [
+          "LHC 205"
+        ],
+        "course_code": "EC3154",
+        "course_name": "Sedimentology and Stratigraphy",
+        "slot": "B",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 206",
+        "rooms": [
+          "LHC 206"
+        ],
+        "course_code": "MT3144",
+        "course_name": "Ordinary Differential Equations",
+        "slot": "B",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 303",
+        "rooms": [
+          "LHC 303"
+        ],
+        "course_code": "MT3174",
+        "course_name": "Fields and Galois theory",
+        "slot": "B",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 301",
+        "rooms": [
+          "LHC 301"
+        ],
+        "course_code": "PH4163",
+        "course_name": "Astronomy and Astrophysics - I",
+        "slot": "B",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-09:55",
+        "room_number": "LHC 304",
+        "rooms": [
+          "LHC 304"
+        ],
+        "course_code": "SE4123",
+        "course_name": "Science and the world",
+        "slot": "B",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 201",
+        "rooms": [
+          "LHC 201"
+        ],
+        "course_code": "BI3124",
+        "course_name": "Advanced Molecular Biology",
+        "slot": "C",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 101",
+        "rooms": [
+          "LHC 101"
+        ],
+        "course_code": "BI5114",
+        "course_name": "Biostatistics",
+        "slot": "C",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 304",
+        "rooms": [
+          "LHC 304"
+        ],
+        "course_code": "MT4144",
+        "course_name": "Representation theory of Finite Groups",
+        "slot": "C",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "10:00-10:55",
+        "room_number": "LHC 301",
+        "rooms": [
+          "LHC 301"
+        ],
+        "course_code": "PH3234",
+        "course_name": "Statistical Mechanics I",
+        "slot": "C",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 201",
+        "rooms": [
+          "LHC 201"
+        ],
+        "course_code": "BI3174",
+        "course_name": "Advanced Biochemistry - I",
+        "slot": "D",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 203",
+        "rooms": [
+          "LHC 203"
+        ],
+        "course_code": "CH4164",
+        "course_name": "Bioorganic Chemistry and Chemical Biology",
+        "slot": "D",
+        "kind": "lecture",
+        "notes": [
+          "Name is cut off in this PDF cell; completed from the same course on other days"
+        ]
+      },
+      {
+        "day": "Friday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 206",
+        "rooms": [
+          "LHC 206"
+        ],
+        "course_code": "EC3124",
+        "course_name": "Physics of the Atmosphere",
+        "slot": "D",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 306",
+        "rooms": [
+          "LHC 306"
+        ],
+        "course_code": "MT3154",
+        "course_name": "Graph Theory",
+        "slot": "D",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 301",
+        "rooms": [
+          "LHC 301"
+        ],
+        "course_code": "PH3124",
+        "course_name": "Quantum Mechanics-I",
+        "slot": "D",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 303",
+        "rooms": [
+          "LHC 303"
+        ],
+        "course_code": "PH4133",
+        "course_name": "Quantum Field Theory-I",
+        "slot": "D",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "11:00-11:55",
+        "room_number": "LHC 305",
+        "rooms": [
+          "LHC 305"
+        ],
+        "course_code": "PH5244",
+        "course_name": "Quantum Metrology and Sensing",
+        "slot": "D",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "12:00-12:55",
+        "room_number": "LHC 201",
+        "rooms": [
+          "LHC 201"
+        ],
+        "course_code": "BI3333/HS3173",
+        "course_name": "Disease and Discourse",
+        "slot": "G",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "12:00-12:55",
+        "room_number": "LHC 203",
+        "rooms": [
+          "LHC 203"
+        ],
+        "course_code": "BI3344",
+        "course_name": "Microbial Genetics",
+        "slot": "G",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "12:00-12:55",
+        "room_number": "LHC 205",
+        "rooms": [
+          "LHC 205"
+        ],
+        "course_code": "CH4184",
+        "course_name": "Electrochemistry",
+        "slot": "G",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "12:00-12:55",
+        "room_number": "LHC 305",
+        "rooms": [
+          "LHC 305"
+        ],
+        "course_code": "EC3323",
+        "course_name": "Hydrology",
+        "slot": "G",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "12:00-12:55",
+        "room_number": "LHC 303",
+        "rooms": [
+          "LHC 303"
+        ],
+        "course_code": "HS3263",
+        "course_name": "History of Architecture in India",
+        "slot": "G",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "12:00-12:55",
+        "room_number": "LHC 306",
+        "rooms": [
+          "LHC 306"
+        ],
+        "course_code": "MT6134",
+        "course_name": "Algebra - I",
+        "slot": "G",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "12:00-12:55",
+        "room_number": "LHC 301",
+        "rooms": [
+          "LHC 301"
+        ],
+        "course_code": "PH3134",
+        "course_name": "Optics",
+        "slot": "G",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "12:00-12:55",
+        "room_number": "LHC 206",
+        "rooms": [
+          "LHC 206"
+        ],
+        "course_code": "SE4133",
+        "course_name": "Introduction to Learning Sciences",
+        "slot": "G",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "14:00-14:55",
+        "room_number": "LHC 201",
+        "rooms": [
+          "LHC 201"
+        ],
+        "course_code": "BI3154",
+        "course_name": "Neurobiology - I",
+        "slot": "I",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "14:00-14:55",
+        "room_number": "LHC 306",
+        "rooms": [
+          "LHC 306"
+        ],
+        "course_code": "CH4114",
+        "course_name": "Organic Synthesis - II",
+        "slot": "I",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "14:00-14:55",
+        "room_number": "LHC 305",
+        "rooms": [
+          "LHC 305"
+        ],
+        "course_code": "DS3143/EC3183",
+        "course_name": "Parameter Estimation and Inverse Theory",
+        "slot": "I",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "14:00-14:55",
+        "room_number": "LHC 304",
+        "rooms": [
+          "LHC 304"
+        ],
+        "course_code": "MT3134",
+        "course_name": "Point Set Topology",
+        "slot": "I",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "14:00-14:55",
+        "room_number": "LHC 203",
+        "rooms": [
+          "LHC 203"
+        ],
+        "course_code": "PH4154",
+        "course_name": "Nuclear and Particle Physics",
+        "slot": "I",
+        "kind": "lecture"
+      },
+      {
+        "day": "Friday",
+        "time": "15:00-17:55",
+        "room_number": null,
+        "rooms": [],
+        "course_code": "CH3163",
+        "course_name": "Advanced Organic Chemistry Laboratory",
+        "slot": "Lab 2",
+        "kind": "lab",
+        "notes": [
+          "No room printed. The lab cell is merged across the 15:00, 16:00 and 17:00 columns in the PDF (15:00-17:55)"
+        ]
+      },
+      {
+        "day": "Friday",
+        "time": "15:00-17:55",
+        "room_number": null,
+        "rooms": [],
+        "course_code": "CH4153",
+        "course_name": "Advanced Physical Chemistry Laboratory",
+        "slot": "Lab 2",
+        "kind": "lab",
+        "notes": [
+          "No room printed. The lab cell is merged across the 15:00, 16:00 and 17:00 columns in the PDF (15:00-17:55)"
+        ]
+      },
+      {
+        "day": "Friday",
+        "time": "15:00-17:55",
+        "room_number": null,
+        "rooms": [],
+        "course_code": "PH3173",
+        "course_name": "Physics Lab-III",
+        "slot": "Lab 2",
+        "kind": "lab",
+        "notes": [
+          "No room printed. The lab cell is merged across the 15:00, 16:00 and 17:00 columns in the PDF (15:00-17:55)"
+        ]
+      },
+      {
+        "day": "Friday",
+        "time": "15:00-17:55",
+        "room_number": null,
+        "rooms": [],
+        "course_code": "PH4144",
+        "course_name": "Physics Lab-V",
+        "slot": "Lab 2",
+        "kind": "lab",
+        "notes": [
+          "No room printed. The lab cell is merged across the 15:00, 16:00 and 17:00 columns in the PDF (15:00-17:55)"
+        ]
+      }
+    ]
+  },
+  "notes": [
+    "Rebuilt from the PDF and checked cell by cell against zoomed images of every day block in all three year groups.",
+    "Each entry is one course in one time column; several courses share a time column, each with its own room, so day+time alone is not unique.",
+    "Rooms printed with a missing separator or split across lines (e.g. \"LHC304\", \"101,103\" then \"105,...\") are normalised to \"LHC 304\", \"LHC 101, LHC 103, LHC 105, ...\".",
+    "Where the PDF prints no room (Year I lab/computing blocks, Lab 1/Lab 2 practicals, Colloquium, MT5114 & MT5124, EC3164 on Tuesday) room_number is null.",
+    "Cross-listed codes keep both parts, e.g. BI3134/DS3114.",
+    "Inferred (not printed) items: the 18:55 end of TD3113; the room \"G1\" for EC4164 on Monday; the completed name of CH4164 on Friday. Each carries a note."
+  ]
+}
